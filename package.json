@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "videojs-event-tracking": "^1.0.3"
+  }
+}
