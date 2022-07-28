@@ -91,11 +91,11 @@ $("#curdate").css('font-weight', '700');
       if (userPlay === false){
         player.muted(false);
       player.currentTime(0);
-      $("#btnPlay").hide();
+      $(this).hide();
       userPlay = true;
     } else {
       player.play();
-      $("#btnPlay").hide();
+      $(this).hide();
       }
       
       // setInterval(videoTrack, 1000);
@@ -149,22 +149,7 @@ $("#curdate").css('font-weight', '700');
 
 
 
-      function getCookie(cname) {
-var name = cname + "=";
-var decodedCookie = decodeURIComponent(document.cookie);
-var ca = decodedCookie.split(';');
-for(var i = 0; i <ca.length; i++) {
-  var c = ca[i];
-  while (c.charAt(0) == ' ') {
-    c = c.substring(1);
-  }
-  if (c.indexOf(name) == 0) {
-    return c.substring(name.length, c.length);
-  }
-}
-return "";
-      
-          }//getCookie
+
     
           const tokent = getCookie("userToken");
       
