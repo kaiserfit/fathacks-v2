@@ -116,6 +116,8 @@ $("#curdate").css('font-weight', '700');
       player.currentTime(0);
     }
   }
+
+  player.on('tracking:firstplay', (e, data) => console.log(data));
   player.on('play', (e, data) => {
    
   });
