@@ -1271,3 +1271,9 @@ display: none !important;
     box-shadow: 0 0 10px 5px #005e55;
     border-radius:6px 50px 50px 6px;
   }
+
+  @media (min-width: 280px) and (max-width: 991px){
+    .bundle-name, .bundle-name.bundle-ultimate {
+      border-radius: 15px 50px;
+    }
+  }
