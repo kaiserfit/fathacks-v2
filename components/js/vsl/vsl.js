@@ -76,22 +76,24 @@ $("#curdate").css('font-weight', '700');
 
       }); //end doc ready
       var userPlay = false;
-      const player = videojs('my-video', {
-        "playbackRates": [0.75, 1, 1.25, 1.5],
-        "controls": true,
-        muted: true,
-               
-        fluid: true,
-        autoplay: true,
-        plugins: { eventTracking: true }
-    } );
-
-
+      const player = videojs('my-video');
+    //   const player = videojs('my-video', {
+    //     "playbackRates": [0.75, 1, 1.25, 1.5],
+    //     "controls": true,
+    //     muted: true,
+       
+    //     fluid: true,
+    //     autoplay: true,
+    //     plugins: { eventTracking: true }
+    // } );
+    player.eventTracking({plugins: { eventTracking: true }})
+    
     $("#btnPlay").click(function(){
       if (userPlay === false){
         player.muted(false);
       player.currentTime(0);
       $(this).hide();
+      $(".video-js .vjs-control-bar").css({"visibility":"visible"});
       userPlay = true;
     } else {
       player.play();
@@ -117,11 +119,13 @@ $("#curdate").css('font-weight', '700');
     }
   }
 
-  player.on('tracking:firstplay', (e, data) => console.log(data));
-  player.on('play', (e, data) => {
-   
+  player.on('tracking:firstplay', (e, data) => {
+    $(".control-onload").css({"display":"block"});
   });
-  player.on('tracking:pause', (e, data) => $("#btnPlay").show());
+ 
+  // player.on('play', (e, data) => $("#btnPlay").hide());
+  // player.on('tracking:pause', (e, data) => console.log(data));
+  // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
   
       
       function productLoad(){
