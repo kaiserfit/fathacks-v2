@@ -553,11 +553,20 @@ body {
       .product-pack {
         font-family: 'Barlow', sans-serif;
         background-color: #fff;
+        transition: all 0.2s ease-in-out
       }
     .product-pack:hover {
-      background-color: #fffeda;
+      /* background-color: #fffeda; */
+      transform: scale(1.01);
+      
     }
     .green {
+      
+      background-color:  	#FFD700;
+      background-image: linear-gradient( 	#FFD700, #fff);
+    }
+
+    .text-green {
       color: #005e55;
     }
 
@@ -689,8 +698,12 @@ display: none !important;
 }
 
 #co-box #bronze {
-  box-shadow: 0 0 15px 10px #cd7f32;
-   color: #000;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 0 15px 5px #cd7f32;
+   /* color: #000; */
   background-image: linear-gradient(to right, #cd7f32, white, #cd7f32);
 }
 	#co-box .bundle-shipping {
@@ -1238,4 +1251,23 @@ display: none !important;
       top: -1.4% !important;
       
     }
+  }
+
+
+  .bundle-name {
+    
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: #495057;
+      box-shadow: 0 0 10px 5px #6c757d;
+      border-radius:0px 50px 50px 0px;
+      color: #fff;
+      margin-bottom: 1.75rem;
+  }
+
+  .bundle-name.bundle-ultimate{
+    background-color: #212529;
+    box-shadow: 0 0 10px 5px #005e55;
+    border-radius:6px 50px 50px 6px;
   }
