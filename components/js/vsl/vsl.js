@@ -168,7 +168,7 @@ $("#curdate").css('font-weight', '700');
                 success: function(data) {
                   // console.log(data);
                 
-                  window.location.href = "https://kaizerfit.com/kaisercoach-bundle-checkout.html?dba="+ dba +"&spid="+ testidx +"&page="+page; //use these parameters for split testing
+                  window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba +"&spid="+ testidx +"&page="+page; //use these parameters for split testing
                 },
                  error: function(data){
                    console.log(data);
@@ -200,7 +200,7 @@ $('.checkout-button').click(function() {
  
     // console.log('no test');
     setTimeout(function(){
-      window.location.href = "https://kaizerfit.com/kaisercoach-bundle-checkout.html?dba="+ dba;
+      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
     }, 200);
     
    }
@@ -226,7 +226,7 @@ $('.checkout-button').click(function() {
    
       // console.log('no test');
       setTimeout(function(){
-        window.location.href = "https://kaizerfit.com/kaisercoach-bundle-checkout.html?dba="+ dba;
+        window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
       }, 200);
       
      }
