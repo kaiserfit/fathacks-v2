@@ -180,7 +180,7 @@ $("#curdate").css('font-weight', '700');
   
   
 
-$('.checkout-button').click(function() {
+$('.checkout-button, .otp-btn').click(function() {
   
   var page = getCookie('page');
   var dba=$(this).data('sku');

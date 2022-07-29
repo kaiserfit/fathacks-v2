@@ -84,6 +84,10 @@ body {
 .d-6 {
   font-size: 2.4rem;
 }
+.position-relative {
+  position: relative;
+}
+
 
 
 .step-section {
@@ -1276,4 +1280,12 @@ display: none !important;
     .bundle-name, .bundle-name.bundle-ultimate {
       border-radius: 15px 50px;
     }
+  }
+
+
+  .otp-btn {
+    position: relative;
+    margin-top: 2.5rem;
+    font-size: 2.25rem;
+    margin-bottom: 1.75rem;
   }
