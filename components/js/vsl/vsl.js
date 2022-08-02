@@ -77,6 +77,18 @@ $("#curdate").css('font-weight', '700');
 
 
       }); //end doc ready
+
+
+
+      var hook1 = false;
+    var hook2 = false;
+    var hook3 = false;
+    var hook4 = false;
+    var hook5 = false;
+    var hook6 = false;
+    var hookFinal = false;
+
+
       var userPlay = false;
       const player = videojs('my-video');
     //   const player = videojs('my-video', {
@@ -128,7 +140,80 @@ $("#curdate").css('font-weight', '700');
   // player.on('play', (e, data) => $("#btnPlay").hide());
   // player.on('tracking:pause', (e, data) => console.log(data));
   // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
-  
+  player.on('timeupdate', function(){
+    var time = player.currentTime();
+
+    // if (time >= 60 && time < 300){
+    //   if (hook1 === false) {
+    //     ttq.track('CompleteRegistration');
+    //     // fbq('track', 'AddToCart', {}, {eventID:event_id});
+    //     // kTr('AddToCart');
+    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/6K6WCIrh87QDENeensco'});
+    //     hook1 = true;
+    //   }
+    // }
+
+    // if (time >= 300 && time < 600){
+    //   if (hook2 === false) {
+    //     ttq.track('Download');
+    //     // fbq('track', 'AddToWishList', {}, {eventID:event_id});
+    //     // kTr('AddToWishList');
+    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/fJd-CNrm87QDENeensco'});
+    //     hook2 = true;
+    //   }
+    // }
+
+    // if (time >= 600 && time < 900) {
+    //   if (hook3 === false) {
+    //     // fbq('track', 'Search', {}, {eventID:event_id});
+    //     // kTr('Search');
+    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/ksVsCOng8bQDENeensco'});
+    //     hook3 = true;
+    //   }
+    // }
+
+    // if (time >= 900 && time < 1800) {
+    //   if (hook4 === false) {
+    //     ttq.track('Subscribe');
+    //   // fbq('track', 'CompleteRegistration', {}, {eventID:event_id});
+    //   // kTr('CompleteRegistration');
+    //   gtag('event', 'conversion', {'send_to': 'AW-10886811479/tWHeCMfu87QDENeensco'});
+    //   hook4 = true;
+    //   }
+    // }
+
+    // if (time >= 1800 && time < 3000) {
+    //   if (hook5 === false) {
+    //     // fbq('track', 'Subscribe', {}, {eventID:event_id});
+    //     // kTr('Subscribe');
+    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/T6AxCITw87QDENeensco'});
+    //     hook5 = true;
+    //   }
+    // }
+
+    // if (time >= 3000) {
+    //   if (hookFinal === false) {
+      
+    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
+    //     hookFinal = true;
+    //   }
+    // }
+
+    if (time >= 2690){
+      if (hook6 === false) {
+        // ttq.track('AddPaymentInfo');
+      // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
+      // kTr('AddPaymentInfo');
+      document.cookie = "fh-watched=1";
+      $("#co-box").show();
+      // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
+      hook6 = true;
+      }
+    }
+
+
+
+  });
       
       function productLoad(){
         var email = getCookie('em');
