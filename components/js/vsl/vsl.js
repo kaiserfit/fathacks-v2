@@ -233,8 +233,7 @@ $('.checkout-button, .otp-btn').click(function() {
   var plan = $(this).parent().find('.subscribe-plan');
   
   var rdb = plan.find("input[type='radio']:checked");
-  console.log(rdb.val());
-  return false;
+ 
   var page = getCookie('page');
   var dba= rdb.val();
   var testidx = getCookie('testid'); //change this to the id of the active test
