@@ -27,7 +27,7 @@ if (v === 'instant'){
       // $(".video-play").hide();
     }
       if (fhw != "") {
-        document.getElementById("co-box").style.display = 'block';
+        // document.getElementById("co-box").style.display = 'block';
 
 }
 
