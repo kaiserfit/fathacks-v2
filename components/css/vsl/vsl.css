@@ -399,6 +399,8 @@ body {
       padding-top: 3rem;
       padding-bottom: 3rem;
     }
+
+
 	#co-box{
     padding-top: 24px;
     padding-left: 0;
@@ -553,6 +555,10 @@ body {
 
     .lh-1 {
       line-height: 1;
+    }
+
+    .lh-2 {
+      line-height: 1.25;
     }
       .product-pack {
         font-family: 'Barlow', sans-serif;
@@ -1288,4 +1294,21 @@ display: none !important;
     margin-top: 2.5rem;
     font-size: 2.25rem;
     margin-bottom: 1.75rem;
+  }
+
+  .narrative {
+    width: 60%;
+
+  }
+
+  @media (min-width: 280px) and (max-width: 767.98px){
+    .narrative {
+      width: 100%;
+  
+    }
+  }
+
+
+  .ms-1 {
+    margin-left: 1rem;
   }

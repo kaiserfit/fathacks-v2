@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 
- 
+  $('.subscribe-plan').each(function(){
+    $('input[type=radio]', this).get(0).checked = true;
+});
     var tokenx = "";
 var v = getCookie('rec');
 
@@ -155,7 +157,6 @@ $("#curdate").css('font-weight', '700');
 
 
     
-          const tokent = getCookie("userToken");
       
           function recordCheckout(testidx, page, dba){ //function to record checkout click
             var mobile = getCookie('mobile');
@@ -177,13 +178,65 @@ $("#curdate").css('font-weight', '700');
           }
   
  
-  
+          $('.bronze-pack').change(function() {
+            
+            var priceText = $(this).parent().next();
+           if ($(this).val() === "bronze-saver") {
+            priceText.html(
+              '<p style="font-size:2rem">Save 15%</p>'+
+              '<p class="product-price">$59 <span class="per-bottle"> / bottle</span></p>>'
+            )
+           } else {
+            priceText.html(
+              
+              '<span class="product-price">$69</span><span class="per-bottle"> / bottle</span>'
+            )
+           }
+          });
+
+          $('.gold-pack').change(function() {
+           
+            var priceText = $(this).parent().next();
+           if ($(this).val() === "gold-saver") {
+            priceText.html(
+              '<p style="font-size:2rem">Save 17%</p>'+
+              '<p class="product-price">$49 <span class="per-bottle"> / bottle</span></p>>'
+            )
+           } else {
+            priceText.html(
+              
+              '<span class="product-price">$59</span><span class="per-bottle"> / bottle</span>'
+            )
+           }
+          });
+
+          $('.platinum-pack').change(function() {
+           
+            var priceText = $(this).parent().next();
+           if ($(this).val() === "platinum-saver") {
+            priceText.html(
+              '<p style="font-size:2rem">Save 20%</p>'+
+              '<p class="product-price">$39 <span class="per-bottle"> / bottle</span></p>>'
+            )
+           } else {
+            priceText.html(
+              
+              '<span class="product-price">$49</span><span class="per-bottle"> / bottle</span>'
+            )
+           }
+          });
   
 
 $('.checkout-button, .otp-btn').click(function() {
   
+
+  var plan = $(this).parent().find('.subscribe-plan');
+  
+  var rdb = plan.find("input[type='radio']:checked");
+  console.log(rdb.val());
+  return false;
   var page = getCookie('page');
-  var dba=$(this).data('sku');
+  var dba= rdb.val();
   var testidx = getCookie('testid'); //change this to the id of the active test
   var v = getCookie('vsltest');
   if (v != '') {
