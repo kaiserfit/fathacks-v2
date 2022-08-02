@@ -269,7 +269,7 @@ $("#curdate").css('font-weight', '700');
            if ($(this).val() === "bronze-saver") {
             priceText.html(
               '<p style="font-size:2rem">Save 15%</p>'+
-              '<p class="product-price">$59 <span class="per-bottle"> / bottle</span></p>>'
+              '<p class="product-price">$59 <span class="per-bottle"> / bottle</span></p>'
             )
            } else {
             priceText.html(
@@ -285,7 +285,7 @@ $("#curdate").css('font-weight', '700');
            if ($(this).val() === "gold-saver") {
             priceText.html(
               '<p style="font-size:2rem">Save 17%</p>'+
-              '<p class="product-price">$49 <span class="per-bottle"> / bottle</span></p>>'
+              '<p class="product-price">$49 <span class="per-bottle"> / bottle</span></p>'
             )
            } else {
             priceText.html(
@@ -301,7 +301,7 @@ $("#curdate").css('font-weight', '700');
            if ($(this).val() === "platinum-saver") {
             priceText.html(
               '<p style="font-size:2rem">Save 20%</p>'+
-              '<p class="product-price">$39 <span class="per-bottle"> / bottle</span></p>>'
+              '<p class="product-price">$39 <span class="per-bottle"> / bottle</span></p>'
             )
            } else {
             priceText.html(
