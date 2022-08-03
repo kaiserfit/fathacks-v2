@@ -114,6 +114,7 @@ document.cookie="mobile="+window.mobileCheck();
     $(".control-onload").css({"display":"block"});
   });
  
+  
   // player.on('play', (e, data) => $("#btnPlay").hide());
   // player.on('tracking:pause', (e, data) => console.log(data));
   // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
