@@ -646,6 +646,8 @@ body {
       transform: scale(1.01);
       
     }
+
+    #lifetime-text {font-weight: 900;font-size: 6rem;word-break: break-word;}
     .green {
       
       background-color:  	#FFD700;
@@ -903,7 +905,12 @@ display: none !important;
          }
 
 @media (min-width: 280px)and (max-width: 480px) {
+  #lifetime-text {font-weight: 700;font-size: 4rem;}
 
+  .payment-plan {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+  }
   .vsl-play-desktop {
     width: 100%;
  
