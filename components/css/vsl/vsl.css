@@ -1424,6 +1424,14 @@ display: none !important;
 
   }
 
+  @media (min-width: 1400px) {
+    .narrative {
+
+       width: 50%;
+      
+     }
+  }
+
   @media (min-width: 280px) and (max-width: 767.98px){
     .narrative {
       width: 95%;
