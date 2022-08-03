@@ -1,8 +1,6 @@
 $( document ).ready(function() {
 
-  $('.subscribe-plan').each(function(){
-    $('input[type=radio]', this).get(0).checked = true;
-});
+ 
     var tokenx = "";
 var v = getCookie('rec');
 
@@ -51,28 +49,6 @@ document.cookie="mobile="+window.mobileCheck();
 "July", "August", "September", "October", "November", "December"
 ];
 
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-  var mm = monthNames[today.getMonth()];
-  var yyyy = today.getFullYear();
-function ordinal_suffix_of(i) {
-  var j = i % 10,
-      k = i % 100;
-  if (j == 1 && k != 11) {
-      return i + "st";
-  }
-  if (j == 2 && k != 12) {
-      return i + "nd";
-  }
-  if (j == 3 && k != 13) {
-      return i + "rd";
-  }
-  return i + "th";
-          }
-var ee = ordinal_suffix_of(dd);
-var today1 = ee + ' ' + mm + ' ' + yyyy;
-$("#curdate").text(today1);
-$("#curdate").css('font-weight', '700');
 
 
 
@@ -134,7 +110,6 @@ $("#curdate").css('font-weight', '700');
   }
 
   player.on('tracking:firstplay', (e, data) => {
-    console.log(data);
     $(".control-onload").css({"display":"block"});
   });
  
@@ -288,85 +263,38 @@ $("#curdate").css('font-weight', '700');
           }
   
  
-          $('.bronze-pack').change(function() {
-            
-            var priceText = $(this).parent().next();
-           if ($(this).val() === "bronze-saver") {
-            priceText.html(
-              '<p style="font-size:2rem">Save 15%</p>'+
-              '<p class="product-price">$59 <span class="per-bottle"> / bottle</span></p>'
-            )
-           } else {
-            priceText.html(
-              
-              '<span class="product-price">$69</span><span class="per-bottle"> / bottle</span>'
-            )
-           }
-          });
-
-          $('.gold-pack').change(function() {
-           
-            var priceText = $(this).parent().next();
-           if ($(this).val() === "gold-saver") {
-            priceText.html(
-              '<p style="font-size:2rem">Save 17%</p>'+
-              '<p class="product-price">$49 <span class="per-bottle"> / bottle</span></p>'
-            )
-           } else {
-            priceText.html(
-              
-              '<span class="product-price">$59</span><span class="per-bottle"> / bottle</span>'
-            )
-           }
-          });
-
-          $('.platinum-pack').change(function() {
-           
-            var priceText = $(this).parent().next();
-           if ($(this).val() === "platinum-saver") {
-            priceText.html(
-              '<p style="font-size:2rem">Save 20%</p>'+
-              '<p class="product-price">$39 <span class="per-bottle"> / bottle</span></p>'
-            )
-           } else {
-            priceText.html(
-              
-              '<span class="product-price">$49</span><span class="per-bottle"> / bottle</span>'
-            )
-           }
-          });
+         
   
 
-$('.checkout-button, .otp-btn').click(function() {
+// $('.checkout-button').click(function() {
   
 
-  var plan = $(this).parent().find('.subscribe-plan');
+//   var plan = $(this).parent().find('.subscribe-plan');
   
-  var rdb = plan.find("input[type='radio']:checked");
+//   var rdb = plan.find("input[type='radio']:checked");
  
-  var page = getCookie('page');
-  var dba= rdb.val();
-  var testidx = getCookie('testid'); //change this to the id of the active test
-  var v = getCookie('vsltest');
-  if (v != '') {
-    var p = getCookie('rec');
-    vrecordCheckout(p);
-  }
+//   var page = getCookie('page');
+//   var dba= rdb.val();
+//   var testidx = getCookie('testid'); //change this to the id of the active test
+//   var v = getCookie('vsltest');
+//   if (v != '') {
+//     var p = getCookie('rec');
+//     vrecordCheckout(p);
+//   }
 
  
-    if (testidx != '') { //there is an active test;
-    // console.log('test');
-    recordCheckout(testidx, page, dba); 
+//     if (testidx != '') { //there is an active test;
 
-  } else { //there is no running test
+//     recordCheckout(testidx, page, dba); 
+
+//   } else { //there is no running test
  
-    // console.log('no test');
-    setTimeout(function(){
-      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
-    }, 200);
+//     setTimeout(function(){
+//       window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+//     }, 200);
     
-   }
-  });
+//    }
+//   });
 
 
    $('#product-section-2 .product-pack').click(function() {
