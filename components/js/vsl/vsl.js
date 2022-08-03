@@ -1,22 +1,18 @@
 $( document ).ready(function() {
 
  
-    var tokenx = "";
+   
 var v = getCookie('rec');
-
 if (v === 'instant'){
   document.getElementById("co-box").style.display = 'block';
 }
    
-   function showCO(){
-     document.getElementById("co-box").style.display = 'block';
-     
+ function showCO(){
+     document.getElementById("co-box").style.display = 'block'; 
      document.cookie = "fh-watched=1";
      productLoad();
    }
 
-    
-   
    function checkCookie() {
 
      var fhw = getCookie("fh-watched");
@@ -45,9 +41,134 @@ document.cookie="mobile="+window.mobileCheck();
 
 
 
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-"July", "August", "September", "October", "November", "December"
-];
+   var hook1 = false;
+   var hook2 = false;
+   var hook3 = false;
+   var hook4 = false;
+   var hook5 = false;
+   var hook6 = false;
+   var hookFinal = false;
+
+
+     var userPlay = false;
+    //  const player = videojs('my-video');
+     const player = videojs('my-video', {
+       "playbackRates": [0.75, 1, 1.25, 1.5],
+       "controls": true,
+       muted: true,
+       sources: [{
+        src:'https://d2rvo1g7c89cun.cloudfront.net/',
+        type: "video/mp4",
+    
+      }],
+      controls: true,
+       fluid: true,
+       autoplay: true,
+       plugins: { eventTracking: true }
+   } );
+   player.eventTracking({plugins: { eventTracking: true }})
+   
+   $("#btnPlay").click(function(){
+     if (userPlay === false){
+       player.muted(false);
+     player.currentTime(0);
+     $(this).hide();
+     $(".video-js .vjs-control-bar").css({"visibility":"visible"});
+     userPlay = true;
+   } else {
+     player.play();
+     $(this).hide();
+     }
+     
+   
+ });
+
+
+ player.on('tracking:firstplay', (e, data) => {
+   console.log(data);
+   $(".control-onload").css({"display":"block"});
+ });
+
+ 
+ // player.on('play', (e, data) => $("#btnPlay").hide());
+ // player.on('tracking:pause', (e, data) => console.log(data));
+ // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
+ player.on('timeupdate', function(){
+   var time = player.currentTime();
+
+   // if (time >= 60 && time < 300){
+   //   if (hook1 === false) {
+   //     ttq.track('CompleteRegistration');
+   //     // fbq('track', 'AddToCart', {}, {eventID:event_id});
+   //     // kTr('AddToCart');
+   //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/6K6WCIrh87QDENeensco'});
+   //     hook1 = true;
+   //   }
+   // }
+
+   // if (time >= 300 && time < 600){
+   //   if (hook2 === false) {
+   //     ttq.track('Download');
+   //     // fbq('track', 'AddToWishList', {}, {eventID:event_id});
+   //     // kTr('AddToWishList');
+   //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/fJd-CNrm87QDENeensco'});
+   //     hook2 = true;
+   //   }
+   // }
+
+   // if (time >= 600 && time < 900) {
+   //   if (hook3 === false) {
+   //     // fbq('track', 'Search', {}, {eventID:event_id});
+   //     // kTr('Search');
+   //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/ksVsCOng8bQDENeensco'});
+   //     hook3 = true;
+   //   }
+   // }
+
+   // if (time >= 900 && time < 1800) {
+   //   if (hook4 === false) {
+   //     ttq.track('Subscribe');
+   //   // fbq('track', 'CompleteRegistration', {}, {eventID:event_id});
+   //   // kTr('CompleteRegistration');
+   //   gtag('event', 'conversion', {'send_to': 'AW-10886811479/tWHeCMfu87QDENeensco'});
+   //   hook4 = true;
+   //   }
+   // }
+
+   // if (time >= 1800 && time < 3000) {
+   //   if (hook5 === false) {
+   //     // fbq('track', 'Subscribe', {}, {eventID:event_id});
+   //     // kTr('Subscribe');
+   //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/T6AxCITw87QDENeensco'});
+   //     hook5 = true;
+   //   }
+   // }
+
+   // if (time >= 3000) {
+   //   if (hookFinal === false) {
+     
+   //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
+   //     hookFinal = true;
+   //   }
+   // }
+
+   if (time >= 2690){
+     if (hook6 === false) {
+       // ttq.track('AddPaymentInfo');
+     // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
+     // kTr('AddPaymentInfo');
+     document.cookie = "fh-watched=1";
+     $("#co-box").load("../content.html");
+     wg();
+     // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
+     hook6 = true;
+     }
+   }
+
+
+
+ });
+   
 
 
 
@@ -56,143 +177,7 @@ document.cookie="mobile="+window.mobileCheck();
 
 
 
-      var hook1 = false;
-    var hook2 = false;
-    var hook3 = false;
-    var hook4 = false;
-    var hook5 = false;
-    var hook6 = false;
-    var hookFinal = false;
-
-
-      var userPlay = false;
-      const player = videojs('my-video');
-    //   const player = videojs('my-video', {
-    //     "playbackRates": [0.75, 1, 1.25, 1.5],
-    //     "controls": true,
-    //     muted: true,
-       
-    //     fluid: true,
-    //     autoplay: true,
-    //     plugins: { eventTracking: true }
-    // } );
-    player.eventTracking({plugins: { eventTracking: true }})
     
-    $("#btnPlay").click(function(){
-      if (userPlay === false){
-        player.muted(false);
-      player.currentTime(0);
-      $(this).hide();
-      $(".video-js .vjs-control-bar").css({"visibility":"visible"});
-      userPlay = true;
-    } else {
-      player.play();
-      $(this).hide();
-      }
-      
-      // setInterval(videoTrack, 1000);
-  });
-
-  function forward(){
-    var t = player.currentTime() + 10;
-    player.currentTime(t);
-  }
-
-  function rewind(){
-
-    var t = player.currentTime();
-    if (t > 10){
-      t = t-10;
-      player.currentTime(t);
-    } else {
-      player.currentTime(0);
-    }
-  }
-
-  player.on('tracking:firstplay', (e, data) => {
-    console.log(data);
-    $(".control-onload").css({"display":"block"});
-  });
- 
-  
-  // player.on('play', (e, data) => $("#btnPlay").hide());
-  // player.on('tracking:pause', (e, data) => console.log(data));
-  // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
-  player.on('timeupdate', function(){
-    var time = player.currentTime();
-
-    // if (time >= 60 && time < 300){
-    //   if (hook1 === false) {
-    //     ttq.track('CompleteRegistration');
-    //     // fbq('track', 'AddToCart', {}, {eventID:event_id});
-    //     // kTr('AddToCart');
-    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/6K6WCIrh87QDENeensco'});
-    //     hook1 = true;
-    //   }
-    // }
-
-    // if (time >= 300 && time < 600){
-    //   if (hook2 === false) {
-    //     ttq.track('Download');
-    //     // fbq('track', 'AddToWishList', {}, {eventID:event_id});
-    //     // kTr('AddToWishList');
-    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/fJd-CNrm87QDENeensco'});
-    //     hook2 = true;
-    //   }
-    // }
-
-    // if (time >= 600 && time < 900) {
-    //   if (hook3 === false) {
-    //     // fbq('track', 'Search', {}, {eventID:event_id});
-    //     // kTr('Search');
-    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/ksVsCOng8bQDENeensco'});
-    //     hook3 = true;
-    //   }
-    // }
-
-    // if (time >= 900 && time < 1800) {
-    //   if (hook4 === false) {
-    //     ttq.track('Subscribe');
-    //   // fbq('track', 'CompleteRegistration', {}, {eventID:event_id});
-    //   // kTr('CompleteRegistration');
-    //   gtag('event', 'conversion', {'send_to': 'AW-10886811479/tWHeCMfu87QDENeensco'});
-    //   hook4 = true;
-    //   }
-    // }
-
-    // if (time >= 1800 && time < 3000) {
-    //   if (hook5 === false) {
-    //     // fbq('track', 'Subscribe', {}, {eventID:event_id});
-    //     // kTr('Subscribe');
-    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/T6AxCITw87QDENeensco'});
-    //     hook5 = true;
-    //   }
-    // }
-
-    // if (time >= 3000) {
-    //   if (hookFinal === false) {
-      
-    //     gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
-    //     hookFinal = true;
-    //   }
-    // }
-
-    if (time >= 2690){
-      if (hook6 === false) {
-        // ttq.track('AddPaymentInfo');
-      // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
-      // kTr('AddPaymentInfo');
-      document.cookie = "fh-watched=1";
-      $("#co-box").load("../content.html");
-      wg();
-      // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
-      hook6 = true;
-      }
-    }
-
-
-
-  });
 
   function wg(){
     var wg = getCookie("challenge");
