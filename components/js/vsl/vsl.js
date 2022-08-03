@@ -159,7 +159,7 @@ document.cookie="mobile="+window.mobileCheck();
      // kTr('AddPaymentInfo');
      document.cookie = "fh-watched=1";
      $("#co-box").load("./content.html");
-     wg();
+    
      // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
      hook6 = true;
      }

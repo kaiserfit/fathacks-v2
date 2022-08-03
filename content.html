@@ -4590,6 +4590,29 @@
          $('.subscribe-plan').each(function(){
                 $('input[type=radio]', this).get(0).checked = true;
             });
+
+            var wg = getCookie("goal");
+    if (wg !== "") {
+      
+    
+    
+      $(".wg-text").text(wg);
+    
+      
+     
+      $(".bundle-suggestion").html(
+        'Based on your goal of losing:'+
+       '<b class="wg-text">'+ wg + '</b><br>'+
+        'We Suggest the Ultimate bundle'
+      );
+    
+    } else {
+   
+      $(".bundle-suggestion").hide();
+        
+    }
+
+
         $(".faq-question").click(function(){
           var x = $(this).find('.faq-arrow');
           var open = x.hasClass('open');
