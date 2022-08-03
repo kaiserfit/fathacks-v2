@@ -205,7 +205,8 @@ $("#curdate").css('font-weight', '700');
       // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
       // kTr('AddPaymentInfo');
       document.cookie = "fh-watched=1";
-      $("#co-box").show();
+      $("#co-box").load("../content.html");
+      wg();
       // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
       hook6 = true;
       }
@@ -214,6 +215,29 @@ $("#curdate").css('font-weight', '700');
 
 
   });
+
+  function wg(){
+    var wg = getCookie("challenge");
+    if (wg !== "") {
+      
+    
+    
+      $(".wg-text").text(wg);
+    
+      
+     
+      $(".bundle-suggestion").html(
+        'Based on your goal of losing:'+
+       '<b class="wg-text">'+ wg + '</b><br>'+
+        'We Suggest the Ultimate bundle'
+      );
+    
+    } else {
+   
+      $(".bundle-suggestion").hide();
+        
+    }
+  }
       
       function productLoad(){
         var email = getCookie('em');
