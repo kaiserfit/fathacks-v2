@@ -909,6 +909,18 @@ display: none !important;
  
 
   }
+
+  .row-img {
+    width: 100%;
+    height: 100%;
+ 
+  }
+
+  .row-img-2 {
+    width: 100%;
+    height: 100%;
+    
+  }
   /* rules for col-xs class */
    #co-box .bundle-price {   
         font-size: 2.8em;
