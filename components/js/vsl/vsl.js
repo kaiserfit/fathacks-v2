@@ -134,6 +134,7 @@ $("#curdate").css('font-weight', '700');
   }
 
   player.on('tracking:firstplay', (e, data) => {
+    console.log(data);
     $(".control-onload").css({"display":"block"});
   });
  
