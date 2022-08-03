@@ -110,6 +110,7 @@ document.cookie="mobile="+window.mobileCheck();
   }
 
   player.on('tracking:firstplay', (e, data) => {
+    console.log(data);
     $(".control-onload").css({"display":"block"});
   });
  
