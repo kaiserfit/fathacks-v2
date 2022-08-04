@@ -74,6 +74,10 @@ body {
 .m-auto {
   margin: auto;
 }
+.p-1 {
+  padding: 1rem;
+}
+
 .p-2 {
   padding: 2rem;
 }
