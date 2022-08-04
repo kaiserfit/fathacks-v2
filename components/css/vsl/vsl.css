@@ -328,7 +328,15 @@ body {
      
     }
 
-    
+    #col-video {
+      position: unset;
+      display: block;
+      width: 220px !important;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+ 
 
     .narrative-headline {
   
@@ -396,7 +404,11 @@ body {
       text-align: center;
     }
     .q-res {
-      font-size: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.75rem Imp !important;
     }
     #disclaimer p {
    font-size: 1.4em; 
@@ -406,7 +418,14 @@ body {
    font-size: 1.6em; 
      
        }
-      
+       #logoContainer {
+        text-align: center;
+      }
+      #top-banner .logo-bw {
+        height: auto;
+        width: 156px;
+        margin: 0 auto;
+      }
       
     }
   
@@ -466,7 +485,7 @@ body {
 
 
 	#co-box{
-    padding-top: 24px;
+    padding-top: 0px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -518,8 +537,9 @@ body {
 
 
     .product-section {
+      padding-top: 4px;
       font-family: 'Barlow', sans-serif;
-      padding-top: 2rem;
+    
     }
 
     #product-section-1 {
@@ -930,6 +950,7 @@ display: none !important;
 
       #vslFooter {
         font-size: 1.2rem;
+        padding: 0.75rem;
       }
 }
 	@media (min-width: 481px)and (max-width: 767px) {
@@ -1432,6 +1453,14 @@ display: none !important;
 
 
   @media  (max-width: 279.98px) {
+
+    #col-video {
+      
+      display: block;
+      width: 220px !important;
+      margin: 0 auto;
+      text-align: center;
+    }
     .q-res {
       font-size: 1rem !important;
     }
@@ -1444,4 +1473,51 @@ display: none !important;
     #vslDescription, #vslFooter {
       font-size: 1.2rem;
     }
+
+    .bundle-name {
+      padding: 1.25rem;
+      font-size: 2rem;
+    }
+
+    .bottle {
+      font-size: 2rem;
+    }
+
+    .product-price {
+      font-size: 2.5rem;
+    }
+
+    .per-bottle {
+      top: -.2rem;
+      font-size: 2rem;
+    }
+
+    .bonus-summary {
+      font-size: 1.5rem;
+    }
+
+    .padding-2 {
+      padding: 1rem;
+    }
+
+    #lifetime-text, .head-slim{
+      font-size: 2rem;
+    }
+
+    .info-section {
+      width: 100%;
+    }
+    #logoContainer {
+      text-align: center;
+    }
+    #top-banner .logo-bw {
+      height: auto;
+      width: 156px;
+      margin: 0 auto;
+    }
+
+    .mt-1 {
+      margin-top: 0.5rem !important;
+    }
+
   }
