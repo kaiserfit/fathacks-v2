@@ -53,7 +53,7 @@ document.cookie="mobile="+window.mobileCheck();
      var userPlay = false;
     //  const player = videojs('my-video');
      const player = videojs('my-video', {
-       "playbackRates": [0.75, 1, 1.25, 1.5],
+      //  "playbackRates": [0.75, 1, 1.25, 1.5],
        "controls": true,
        muted: true,
        sources: [{

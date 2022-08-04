@@ -163,3 +163,10 @@ textarea {
     position: relative;
     top: -4px;
 }
+
+@media  (max-width: 279.98px) {
+
+    #rev-container{
+        width: 100%;
+    }
+}

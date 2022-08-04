@@ -329,9 +329,9 @@ body {
     }
 
     #col-video {
-      position: unset;
+    
       display: block;
-      width: 220px !important;
+      width: 250px !important;
       margin: 0 auto;
       text-align: center;
     }
@@ -1450,7 +1450,9 @@ display: none !important;
   }
 
   /* rule for very small screens */
-
+#app-screenshot {
+  height:400px; width:250px;
+}
 
   @media  (max-width: 279.98px) {
 
@@ -1496,16 +1498,22 @@ display: none !important;
       font-size: 1.5rem;
     }
 
-    .padding-2 {
+    .padding-2, .p-2 {
       padding: 1rem;
     }
-
+    .col-xs-2 {
+      display: none;
+    }
     #lifetime-text, .head-slim{
       font-size: 2rem;
     }
 
     .info-section {
       width: 100%;
+    }
+
+    .info-content {
+      padding: 8px;
     }
     #logoContainer {
       text-align: center;
@@ -1520,4 +1528,72 @@ display: none !important;
       margin-top: 0.5rem !important;
     }
 
+    .list-content {
+      font-size: 1.5rem;
+    }
+
+    .bundle-suggestion {
+      font-size: 2rem;
+    }
+
+    .step-section {
+      width: 100%;
+      padding: 4rem 1rem;
+    }
+    .step-number {
+      padding: 1rem;
+      font-size: 1.2rem;
+      top: 0;
+    }
+
+    .step-section section {
+      margin-left: 0.75rem;
+    }
+
+
+    #app-section {
+      height: auto;
+      width: 100%;
+    }
+
+    .step-section:nth-of-type(4) .step-number {
+      top: 0 !important;
+    }
+
+    .step-img {
+      height: auto;
+      width: 100%;
+
+    }
+    .narrative {
+      width: 100%;
+    }
+    .narrative-headline {
+      padding: 1rem;
+      /* border: 2px solid white; */
+      font-size: 1.2rem;
+      font-weight: 500;
+      left: 0;
+    }
+
+    #n-title-1{
+      top: -.3%;
+    }
+    #n-title-2 {
+      top: -.6%;
+    }
+
+    .row-img, .row-img-2 {
+      height: auto;
+    }
+    #app-screenshot {
+      height:auto; width:100%;
+    }
+  }
+
+  .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal {
+    display:none;
+  }
+  .video-js.vjs-fullscreen .vjs-volume-menu-button {
+    display:block;
   }
