@@ -396,7 +396,7 @@ body {
       text-align: center;
     }
     .q-res {
-      font-size: 1.8vh;
+      font-size: 1.2rem;
     }
     #disclaimer p {
    font-size: 1.4em; 
@@ -507,20 +507,7 @@ body {
       position: relative;
     }
 
-    #ff1 {
-    height: 100%;
-    width: 100%;
-    /*  padding: 0px 200px;*/
-     padding-top: 20px;
-     padding-bottom: 20px;
-      background-color: #000;
-      position: relative;
-      /* height: 100vh; */
-     /** box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-   box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.4), -12px 0 8px -4px rgba(31, 73, 125, 0.4);
-    width:60% !important;*/
-    
-    }
+
     .section-hidden {
       display: none;
     }
@@ -528,17 +515,7 @@ body {
     #mobile-vsl {
       display: none;
     }
-    #ffa {
-      width: 90%;
-      margin: 0 auto;
-      z-index: 20;
-    }
 
-    #ffb {
-      width: 100%;
-      margin: 0 auto;
-      z-index: 20;
-    }
 
     .product-section {
       font-family: 'Barlow', sans-serif;
@@ -948,7 +925,11 @@ display: none !important;
 
       #vslDescription {
         font-size: 1.75rem; 
-        padding: 20px;
+        padding: 10px;
+      }
+
+      #vslFooter {
+        font-size: 1.2rem;
       }
 }
 	@media (min-width: 481px)and (max-width: 767px) {
@@ -1126,16 +1107,9 @@ display: none !important;
     #logoContainer {
       text-align: center;
     }
-    #ff1 {
-    width: 100% !important;
-    height: 100vh;
-    padding: 0px; 
-     
-       }
 
-       #ffa {
-        width: 100%;
-      }
+
+  
 
       #ffc {
       
@@ -1162,10 +1136,7 @@ display: none !important;
     #product-section-1 {
       display: none;
     }
-/* 
-    #product-section-2 {
-      display: block;
-    } */
+
     
 
     .bonus {   
@@ -1218,14 +1189,8 @@ display: none !important;
   }
 
 @media (min-width: 481px)and (max-width: 768px) {
-    #ff1 {
-    width: 100% !important;
-    height: 100vh;
-      padding: 0px;
-       }
-       #ffa {
-        width: 100%;
-      }
+
+  
       #n-title-3 {
         top: -.7%;
    
@@ -1246,11 +1211,7 @@ display: none !important;
   }
 
 @media (min-width: 769px)and (max-width: 991px) {
-    #ff1 {
-    width: 100% !important;
-    height: 100vh;
-     padding: 0px; 
-       }
+
        .narrative-headline {
   
         font-size: 2.1rem;
@@ -1287,13 +1248,7 @@ display: none !important;
 }
   }
   
-  @media (min-width: 992px) {
-      #ff1 {
-    padding: 0px 200px;
-       }
 
-       
-  }
  
 
   .video-controls {
@@ -1471,4 +1426,22 @@ display: none !important;
 
   .ms-1 {
     margin-left: 0.75rem;
+  }
+
+  /* rule for very small screens */
+
+
+  @media  (max-width: 279.98px) {
+    .q-res {
+      font-size: 1rem !important;
+    }
+
+    .vsl-play-desktop {
+      width: 100%;
+
+    }
+
+    #vslDescription, #vslFooter {
+      font-size: 1.2rem;
+    }
   }
