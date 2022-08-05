@@ -23,7 +23,7 @@ var commentsArray = [
 
       "title": "",
       
-      "content": '<img src="components/img_assets/comments/Renche-Jenkins.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/Renche-Jenkins.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -40,7 +40,7 @@ var commentsArray = [
 
       "title": "I don't even take pictures at the gym before but this is the real deal.",
       
-      "content": '<img src="components/img_assets/comments/tammy-keown.png" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/tammy-keown.png" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -57,7 +57,7 @@ var commentsArray = [
 
       "title": "",
       
-      "content": '<img src="components/img_assets/comments/Nicole-Smith.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/Nicole-Smith.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -91,7 +91,7 @@ var commentsArray = [
 
       "title": "Going steady! props to kaiserfit family!",
       
-      "content": '<img src="components/img_assets/comments/reyna-del-mundo.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/reyna-del-mundo.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -109,7 +109,7 @@ var commentsArray = [
 
       "title": "I left my room singing and dancing!",
       
-      "content": '<img src="components/img_assets/comments/comm_attachment_anam.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/comm_attachment_anam.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -126,7 +126,7 @@ var commentsArray = [
 
       "title": "This Program WORKS! Thanks Coach Shane!",
       
-      "content": '<img src="components/img_assets/comments/nikita.webp" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/nikita.webp" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -143,7 +143,7 @@ var commentsArray = [
 
       "title": "Sharing my week 1 results, I'm on my way to fitness ladies!",
       
-      "content": '<img src="components/img_assets/comments/tysha.webp" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/tysha.webp" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,
@@ -282,7 +282,7 @@ var commentsArray = [
 
       "title": "small VICTORY!",
       
-"content": '<img src="components/img_assets/comments/comm_attachment_helen.PNG" class="ms-3 rounded img-rev" alt="comment attachment"> ',
+"content": '<img src="" data-src="components/img_assets/comments/comm_attachment_helen.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment"> ',
    
        "page": 1,
       "creator": 1,
@@ -318,7 +318,7 @@ var commentsArray = [
 
       "title": "I'm eating more and losing more!",
       
-"content": '<img src="components/img_assets/comments/comm_attachment_jackie.PNG" class="ms-3 rounded img-rev" alt="comment attachment"> ',
+"content": '<img src="" data-src="components/img_assets/comments/comm_attachment_jackie.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment"> ',
    
        "page": 1,
       "creator": 1,
@@ -627,7 +627,7 @@ var commentsArray = [
 
       "title": "This transformation is alarmingly good lmao",
       
-      "content": '<img src="components/img_assets/comments/comm_attachment_ashley.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="" data-src="components/img_assets/comments/comm_attachment_ashley.PNG" class="ms-3 rounded img-rev lazy" alt="comment attachment" >',
    
        "page": 1,
       "creator": 1,

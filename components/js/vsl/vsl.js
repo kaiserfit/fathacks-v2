@@ -30,7 +30,7 @@ if (v === 'instant'){
 else { //initiate timer of vid
   // document.cookie = "fh-watched=1";
   document.cookie = "fh-played=1";
-    // setTimeout(showCO, 2690000);
+   
 
 }  
 
