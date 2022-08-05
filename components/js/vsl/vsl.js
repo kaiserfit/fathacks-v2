@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 
- 
+  $('.subscribe-plan').each(function(){
+    $('input[type=radio]', this).get(0).checked = true;
+});
    
 var v = getCookie('rec');
 if (v === 'instant'){
@@ -66,6 +68,16 @@ document.cookie="mobile="+window.mobileCheck();
        autoplay: true,
        plugins: { eventTracking: true }
    } );
+
+   const hashVal  = [...crypto.getRandomValues(new Uint8Array(4))]
+.map((x,i)=>(i=x/255*61|0,String.fromCharCode(i+(i>9?i>35?61:55:48)))).join``
+const timeStamp = Date.now();    
+const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
+var minWatched = 0;
+
+// $.post("https://pay.kaiserfitapp.com/apiv2/", {a:1, id:visitId},
+// "json"
+// );
    player.eventTracking({plugins: { eventTracking: true }})
    
    $("#btnPlay").click(function(){
@@ -85,7 +97,7 @@ document.cookie="mobile="+window.mobileCheck();
 
 
  player.on('tracking:firstplay', (e, data) => {
-   console.log(data);
+  
    $(".control-onload").css({"display":"block"});
  });
 
@@ -158,7 +170,7 @@ document.cookie="mobile="+window.mobileCheck();
      // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
      // kTr('AddPaymentInfo');
      document.cookie = "fh-watched=1";
-     $("#co-box").load("./content.html");
+    //  $("#co-box").load("./content.html");
     
      // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
      hook6 = true;
@@ -253,66 +265,96 @@ document.cookie="mobile="+window.mobileCheck();
          
   
 
-// $('.checkout-button').click(function() {
+$('.checkout-button').click(function() {
   
 
-//   var plan = $(this).parent().find('.subscribe-plan');
+  var plan = $(this).parent().find('.subscribe-plan');
   
-//   var rdb = plan.find("input[type='radio']:checked");
+  var rdb = plan.find("input[type='radio']:checked");
  
-//   var page = getCookie('page');
-//   var dba= rdb.val();
-//   var testidx = getCookie('testid'); //change this to the id of the active test
-//   var v = getCookie('vsltest');
-//   if (v != '') {
-//     var p = getCookie('rec');
-//     vrecordCheckout(p);
-//   }
-
- 
-//     if (testidx != '') { //there is an active test;
-
-//     recordCheckout(testidx, page, dba); 
-
-//   } else { //there is no running test
- 
-//     setTimeout(function(){
-//       window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
-//     }, 200);
-    
-//    }
-//   });
-
-
-   $('#product-section-2 .product-pack').click(function() {
-
-    var page = getCookie('page');
-    var dba=$(this).data('sku');
-    var testidx = getCookie('testid'); //change this to the id of the active test
-    var v = getCookie('vsltest');
-    if (v != '') {
-      var p = getCookie('rec');
-      vrecordCheckout(p);
-    }
+  var page = getCookie('page');
+  var dba= rdb.val();
+  var testidx = getCookie('testid'); //change this to the id of the active test
+  var v = getCookie('vsltest');
+  if (v != '') {
+    var p = getCookie('rec');
+    vrecordCheckout(p);
+  }
 
  
     if (testidx != '') { //there is an active test;
-      // console.log('test');
-      recordCheckout(testidx, page, dba); 
-    } else { //there is no running test
-   
-      // console.log('no test');
-      setTimeout(function(){
-        window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
-      }, 200);
-      
-     }
-    
+
+    recordCheckout(testidx, page, dba); 
+
+  } else { //there is no running test
  
-  
-  
+    setTimeout(function(){
+      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+    }, 200);
+    
+   }
+  });
+
+
+  $(".faq-question").click(function(){
+    var x = $(this).find('.faq-arrow');
+    var open = x.hasClass('open');
+    var n = $(this).next('.faq-answer');
+
+    x.toggleClass('open');
+    if (open){
+      n.removeClass('open');
+    } else {
+      n.addClass('open');
+    }
+  });
+
+
+  $('.bronze-pack').change(function() {
+            
+    var priceText = $(this).parent().next();
+   if ($(this).val() === "bronze-saver") {
+    priceText.html(
       
-});
+      '<p class="product-price">$59 <span class="per-bottle"> / bottle</span></p>'
+    )
+   } else {
+    priceText.html(
+      
+      '<span class="product-price">$69</span><span class="per-bottle"> / bottle</span>'
+    )
+   }
+  });
 
+  $('.gold-pack').change(function() {
+   
+    var priceText = $(this).parent().next();
+   if ($(this).val() === "gold-saver") {
+    priceText.html(
+  
+      '<p class="product-price">$49 <span class="per-bottle"> / bottle</span></p>'
+    )
+   } else {
+    priceText.html(
+      
+      '<span class="product-price">$59</span><span class="per-bottle"> / bottle</span>'
+    )
+   }
+  });
 
+  $('.platinum-pack').change(function() {
+   
+    var priceText = $(this).parent().next();
+   if ($(this).val() === "platinum-saver") {
+    priceText.html(
+      
+      '<p class="product-price">$39 <span class="per-bottle"> / bottle</span></p>'
+    )
+   } else {
+    priceText.html(
+      
+      '<span class="product-price">$49</span><span class="per-bottle"> / bottle</span>'
+    )
+   }
+  });
 
