@@ -1,6 +1,4 @@
-$(document).ready(function(){
 
-});
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function getRandomArbitrary(min, max) {
     return  Math.floor(Math.random() * (max - min) + min);
@@ -108,8 +106,7 @@ $(".rev-arrows").click(function(e){
    $('html, body').animate({
     scrollTop: $("#product-reviews").offset().top -20
 }, 'slow');
-    // $(".rev-page").removeClass(' active');
-    // $(this).addClass('active');
+
 
 });
 
