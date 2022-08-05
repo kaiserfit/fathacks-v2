@@ -37,30 +37,9 @@
   
   /* media query for active bundle selected image size */
 
-  .bundle-pic {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#blue p {
-    font-size: 1.2em;
-   
-}
-
-#company-contact, .banner-text {
-    font-size: 1.1em;
-}
-#bundle-select {
-    width: 100%;
-}
 
 
 
-.bundle-section, .info-section {
-    width: 100%;
-    margin: 0 auto;
-}
 
 #mb-pic {
     height: auto;
@@ -74,30 +53,6 @@
 
 /* COMMENT SECTION */
 
-.profile-name {
-    margin-left: 20px;
-    font-size: 1.1em;
-  }
-.profile-head {
- height: 45px;
-  width: 45px;
-  
- 
-}
-
-.profile-head p {
-  line-height: 2.2;
-  font-size: 1.2em;
-
-
-}
-
-.profile-head .badge {
- 
-  right: -15px;
-  top: -12px;
- 
-}
 
 .list-head {
     font-size: 1.4em;
@@ -122,30 +77,6 @@
   @media (min-width: 280px) and (max-width: 480px){ 
     /* mobile only */
 
-    .headings {
-        font-size: 2rem;
-    }
-    #in-caret {
-        font-size: 1.8em;
-    }
-    
-    .main-checkout .container #in-caret .caret {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 8px solid #000000;
-        
-    }
-
-    .box-bundle .bundle.bundle-details .bundle-description{
-        font-size: 1.2em;
-     
-    }
-    
-    .box-bundle .bundle.bundle-details .bundle-bottle{
-        font-size: 2.4em;
-        
-    }
-
     .head-slim {
         font-size: 3rem;
     }
@@ -167,9 +98,7 @@
 
   @media (min-width: 481px) and (max-width: 767px){ 
     /* tablets and small screens only */
-#in-caret {
-    font-size: 2em;
-}
+
 
 .main-checkout .container #in-caret .caret {
     border-left: 10px solid transparent;
@@ -177,15 +106,7 @@
     border-top: 10px solid #000000;
    
 }
-    .box-bundle .bundle.bundle-details .bundle-description{
-        font-size: 1.4em;
-     
-    }
-    
-    .box-bundle .bundle.bundle-details .bundle-bottle{
-        font-size: 3.4em;
-        
-    }
+
   }
 
   @media (min-width: 280px) and (max-width: 991px){
