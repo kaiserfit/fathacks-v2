@@ -2158,13 +2158,5 @@ var commentsArray = [
     
     ]
     
-    var usersArray = [
-       {
-          id: 1,
-          fullname: "Current User",
-          email: "current.user@viima.com",
-          profile_picture_url: "https://viima-app.s3.amazonaws.com/media/public/defaults/user-icon.png"
-       },
-   
-    ]
+
     
