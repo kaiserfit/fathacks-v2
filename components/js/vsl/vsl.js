@@ -94,7 +94,7 @@ var minWatched = 0;
      $(this).hide();
      $(".video-js .vjs-control-bar").css({"visibility":"visible"});
      userPlay = true;
-     setInterval(videoTrack, 1000);
+    //  setInterval(videoTrack, 1000);
    } else {
      player.play();
      $(this).hide();
@@ -105,17 +105,16 @@ var minWatched = 0;
 
 
  player.on('tracking:firstplay', (e, data) => {
-  
    $(".control-onload").css({"display":"block"});
  });
 
  
- player.on('play', (e, data) => {
-  if(userPlay){setInterval(videoTrack, 1000)}
-});
+//  player.on('play', (e, data) => {
+//   if(userPlay){setInterval(videoTrack, 1000)}
+// });
 
 
- player.on('tracking:pause', (e, data) => clearInterval(videoTrack));
+//  player.on('tracking:pause', (e, data) => clearInterval(videoTrack));
  player.on('timeupdate', function(){
    var time = player.currentTime();
 
