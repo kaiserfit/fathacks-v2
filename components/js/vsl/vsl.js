@@ -75,9 +75,9 @@ const timeStamp = Date.now();
 const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
 var minWatched = 0;
 
-// $.post("https://pay.kaiserfitapp.com/apiv2/", {a:1, id:visitId},
-// "json"
-// );
+$.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
+"json"
+);
    player.eventTracking({plugins: { eventTracking: true }})
    
    $("#btnPlay").click(function(){
@@ -87,6 +87,7 @@ var minWatched = 0;
      $(this).hide();
      $(".video-js .vjs-control-bar").css({"visibility":"visible"});
      userPlay = true;
+     setInterval(videoTrack, 1000);
    } else {
      player.play();
      $(this).hide();
@@ -102,9 +103,11 @@ var minWatched = 0;
  });
 
  
- // player.on('play', (e, data) => $("#btnPlay").hide());
+ player.on('play', (e, data) => {
+  if(userPlay){setInterval(videoTrack, 1000)}
+});
  // player.on('tracking:pause', (e, data) => console.log(data));
- // player.on('tracking:pause', (e, data) => $("#btnPlay").show());
+ player.on('tracking:pause', (e, data) => clearInterval(videoTrack));
  player.on('timeupdate', function(){
    var time = player.currentTime();
 
@@ -182,14 +185,29 @@ var minWatched = 0;
  });
    
 
+ function videoTrack(){
+  var t = player.currentTime();
+  var second = parseInt(t);
+  var m = second / 60;
+  
+  if ((m % 1) == 0 && m > minWatched){
+    minWatched = m;
+    // console.log('post')
+      pvid();
+  }
+}
+function pvid(){
+  $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:2, id:visitId, m:minWatched},
 
+    "json"
+  );
+}
 
 
       }); //end doc ready
 
 
-
-    
+  
 
   function wg(){
     var wg = getCookie("challenge");
