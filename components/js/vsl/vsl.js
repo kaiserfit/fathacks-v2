@@ -75,8 +75,16 @@ const timeStamp = Date.now();
 const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
 var minWatched = 0;
 
-$.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
+
+async function myFunction() {
+  $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
 "json"
+);
+}
+
+myFunction().then(
+  function(value) { console.log(".") },
+  function(error) { console.log("..") }
 );
    player.eventTracking({plugins: { eventTracking: true }})
    
