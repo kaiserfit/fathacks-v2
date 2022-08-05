@@ -76,16 +76,16 @@ const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
 var minWatched = 0;
 
 
-async function myFunction() {
-  $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
-"json"
-);
-}
+// async function myFunction() {
+//   $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
+// "json"
+// );
+// }
 
-myFunction().then(
-  function(value) { console.log(".") },
-  function(error) { console.log("..") }
-);
+// myFunction().then(
+//   function(value) { console.log(".") },
+//   function(error) { console.log("..") }
+// );
    player.eventTracking({plugins: { eventTracking: true }})
    
    $("#btnPlay").click(function(){
@@ -114,7 +114,8 @@ myFunction().then(
  player.on('play', (e, data) => {
   if(userPlay){setInterval(videoTrack, 1000)}
 });
- // player.on('tracking:pause', (e, data) => console.log(data));
+
+
  player.on('tracking:pause', (e, data) => clearInterval(videoTrack));
  player.on('timeupdate', function(){
    var time = player.currentTime();
