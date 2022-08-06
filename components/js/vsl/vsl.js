@@ -66,6 +66,7 @@ document.cookie="mobile="+window.mobileCheck();
       controls: true,
        fluid: true,
        autoplay: true,
+       preload: "auto",
        poster:'components/assets/img/Play_button.webp',
        plugins: { eventTracking: true }
    } );
