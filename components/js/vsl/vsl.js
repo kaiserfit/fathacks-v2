@@ -61,11 +61,12 @@ document.cookie="mobile="+window.mobileCheck();
        sources: [{
         src:'https://d2rvo1g7c89cun.cloudfront.net/',
         type: "video/mp4",
-    
+        
       }],
       controls: true,
        fluid: true,
        autoplay: true,
+       poster:'components/assets/img/Play_button.webp',
        plugins: { eventTracking: true }
    } );
 
