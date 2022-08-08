@@ -640,6 +640,12 @@
 
   }
 
+    if (window.mobileCheck()){
+        setTimeout(() => {
+            $("#loading").hide();
+        }, 3000);
+    }
+
 //   var fsw = getCookie("fh-played");
 //     if (fsw != "") {
 //       $(".video-play").hide();
