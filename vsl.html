@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="components/css/vsl/vsl.css">	
     <link rel="stylesheet" type="text/css" href="components/css/comments.css">
 
-   
+   <link rel="stylesheet" href="components/css/vsl/loader.css">
     
     <script src="https://kit.fontawesome.com/76508bdf5e.js" crossorigin="anonymous"></script>
 
@@ -221,7 +221,10 @@
 
 </head>
 <body>
-  
+  <div class="container-fluid bg-dark" id="loading">
+    <h4 class="mb-3">Calculating Your Results...</h4>
+    <span class="loader"></span>
+    </div>
 
   <!-- Google Tag Manager (noscript) -->
 <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCBHL75"
@@ -301,7 +304,7 @@
 
 <!------ vsl container -------->
 
-
+<button class="btn btn-lg btn-warning unlock-btn"><i class="fas fa-unlock"></i> UNLOCK YOUR CUSTOM PLAN</button>
  </div><!------ff1-------->
 
  <!-- <div class="container text-muted lh-sm text-center" id="vslFooter">
@@ -401,10 +404,12 @@
           <div class="bna-line">&nbsp;</div>
         </div>
       
-      
+        <div class="text-center">
+            <button class="btn btn-lg btn-default watch-btn gray-glow"><i class="fas fa-play-circle"></i> WATCH VIDEO TO UNLOCK CUSTOM PLAN</button>
+            <button class="btn btn-lg btn-warning unlock-btn"><i class="fas fa-unlock"></i> UNLOCK YOUR CUSTOM PLAN</button>
+        </div>
       </div>
     
-
 
 
 
@@ -481,6 +486,11 @@
         </nav>
 
   </div><!-- /#rev-container -->
+     
+  <div class="text-center">
+    <button class="btn btn-lg btn-default watch-btn gray-glow"><i class="fas fa-play-circle"></i> WATCH VIDEO TO UNLOCK CUSTOM PLAN</button>
+    <button class="btn btn-lg btn-warning unlock-btn"><i class="fas fa-unlock"></i> UNLOCK YOUR CUSTOM PLAN</button>
+</div>
 </div><!-- /#container-fluid for reviews-->
 
 
@@ -584,6 +594,12 @@
     $(".bundle-suggestion").hide();
       
   }
+
+  var fsw = getCookie("fh-played");
+    if (fsw != "") {
+      // $(".video-play").hide();
+      $("#loading").hide();
+    }
   
    </script>
 <script src="components/js/lazyload.js"></script>

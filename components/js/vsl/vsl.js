@@ -21,10 +21,10 @@ if (v === 'instant'){
     var fsw = getCookie("fh-played");
     if (fsw != "") {
       // $(".video-play").hide();
+      // $("#loading").hide();
     }
       if (fhw != "") {
         // document.getElementById("co-box").style.display = 'block';
-
 }
 
 else { //initiate timer of vid
@@ -95,6 +95,7 @@ var minWatched = 0;
      player.currentTime(0);
      $(this).hide();
      $(".video-js .vjs-control-bar").css({"visibility":"visible"});
+     $(".vjs-fullscreen-control").trigger("click");
      userPlay = true;
     //  setInterval(videoTrack, 1000);
    } else {
@@ -109,6 +110,7 @@ var minWatched = 0;
  player.on('tracking:firstplay', (e, data) => {
   console.log(data);
    $(".control-onload").css({"display":"block"});
+   $("#loading").hide();
  });
 
  
@@ -179,6 +181,13 @@ var minWatched = 0;
 
    if (time >= 2690){
      if (hook6 === false) {
+      $(".unlock-btn").show();
+      $(".watch-btn").hide();
+      var x = $("#my-video").hasClass("vjs-fullscreen");
+      if (x) {
+        $(".vjs-fullscreen-control").trigger("click");
+
+      }
        ttq.track('AddPaymentInfo');
      // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
      // kTr('AddPaymentInfo');
@@ -194,6 +203,22 @@ var minWatched = 0;
 
  });
    
+ $(".watch-btn").click(function(){
+  if (userPlay === false){
+    player.muted(false);
+  player.currentTime(0);
+  $("#btnPlay").hide();
+  $(".video-js .vjs-control-bar").css({"visibility":"visible"});
+  $(".vjs-fullscreen-control").trigger("click");
+  userPlay = true;
+ //  setInterval(videoTrack, 1000);
+} else {
+  player.play();
+  $(".vjs-fullscreen-control").trigger("click");
+  
+  }
+  
+ });
 
  function videoTrack(){
   var t = player.currentTime();

@@ -1356,3 +1356,35 @@ display: none !important;
   .video-js.vjs-fullscreen .vjs-volume-menu-button {
     display:block;
   }
+
+  #loading {
+    height: 100vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+  }
+
+
+  .unlock-btn {
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 2rem 4rem;
+    margin: 2rem auto;
+    display: none;
+  }
+
+  .watch-btn{
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 2rem 4rem;
+    margin: 2rem auto;
+  }
+
+  .unlock-btn:hover {
+    color: #23282d;
+  }

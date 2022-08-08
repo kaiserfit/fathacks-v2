@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="components/css/vsl/vsl.css">	
     <link rel="stylesheet" type="text/css" href="components/css/comments.css">
 
-   
+    <link rel="stylesheet" href="components/css/vsl/loader.css">
     
     <script src="https://kit.fontawesome.com/76508bdf5e.js" crossorigin="anonymous"></script>
 
@@ -221,7 +221,10 @@
 
 </head>
 <body>
-  
+  <div class="container-fluid bg-dark" id="loading">
+    <h4 class="mb-3">Calculating Your Results...</h4>
+    <span class="loader"></span>
+    </div>
 
   <!-- Google Tag Manager (noscript) -->
 <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCBHL75"
@@ -5029,6 +5032,12 @@ That’s when Kaiser Coach was BORN!
     $(".bundle-suggestion").hide();
       
   }
+
+  var fsw = getCookie("fh-played");
+    if (fsw != "") {
+      // $(".video-play").hide();
+      $("#loading").hide();
+    }
   
    </script>
 <script src="components/js/lazyload.js"></script>
