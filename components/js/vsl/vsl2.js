@@ -1,9 +1,5 @@
 $( document ).ready(function() {
     timer_init();
-
-     
-
-  
      function checkCookie() {
   
        var fhw = getCookie("fh-watched");
@@ -44,8 +40,7 @@ $( document ).ready(function() {
        var userPlay = false;
       //  const player = videojs('my-video');
        const player = videojs('my-video', {
-      
-         "controls": true,
+         autoplay: true,
          muted: true,
          sources: [{
           src:'https://d2rvo1g7c89cun.cloudfront.net/',
@@ -54,7 +49,6 @@ $( document ).ready(function() {
         }],
          controls: true,
          fluid: true,
-         autoplay: true,
          preload: "auto",
          poster:'components/assets/img/customplay.webp',
          plugins: { eventTracking: true }
@@ -256,23 +250,6 @@ $( document ).ready(function() {
   }
     
   
-        
-        function productLoad(){
-          var email = getCookie('em');
-          if (email != "") {
-            $.ajax({
-              type: 'POST',
-              url: 'https://hook.integromat.com/lmma1cea3wx1ui8ns6oqmys8srojr7gd',
-              crossDomain: true,
-              data: {'email': email},
-              dataType: 'json',
-              success: function() {
-              console.log("sadf");
-              }
-                }); 
-          }
-        }
-
 
         $(".unlock-btn").click(function(){
             window.location.href = "product-selection.html";
