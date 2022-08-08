@@ -36,9 +36,14 @@ color: #3d2eff;
   margin-right:  auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  display: none;
+  color: #fff;
+  
   white-space: normal;
   border-radius: 15px;
+}
+
+.unlock-object {
+  display: none;
 }
 
 #bna-con .watch-btn, #bna-con .unlock-btn {
@@ -1292,7 +1297,7 @@ top: -0.8% !important;
   .unlock-btn {
     width: 100%;
     padding: 1rem;
-    font-size: 2.75rem;
+    font-size: 3.25rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }

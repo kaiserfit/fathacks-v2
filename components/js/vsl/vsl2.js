@@ -105,7 +105,7 @@ $( document ).ready(function() {
      var time = player.currentTime();
     if (time >= 20 ){
         if (hookFinal === false){
-            $(".unlock-btn").show();
+            $(".unlock-object").show();
             $(".watch-btn").hide();
           
         
@@ -176,7 +176,7 @@ $( document ).ready(function() {
   
      if (time >= 2690){
        if (hook6 === false) {
-        $(".unlock-btn").show();
+        $(".unlock-object").show();
         $(".watch-btn").hide();
       
     
