@@ -60,6 +60,9 @@ $( document ).ready(function() {
          plugins: { eventTracking: true }
      } );
   
+     player.ready(function(){
+        $("#loading").hide();
+     });
 
   
 
@@ -84,7 +87,7 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
-       $("#loading").hide();
+       
     $("#vp").text("video is playing in background");
     
      $(".control-onload").css({"display":"block"});
@@ -93,7 +96,7 @@ $( document ).ready(function() {
    
    player.on('play', (e, data) => {
     if(userPlay){$("#btnResume").hide();}
-    $("#loading").hide();
+   
   });
   
  
