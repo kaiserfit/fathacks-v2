@@ -20,7 +20,13 @@ font-family: 'Barlow', sans-serif;
 .q-t {
 color: #3d2eff;
 }
+.red-glow {
 
+    box-shadow: 0 12px 20px 0 rgba(238,75,43,.14),0 5px 23px 0 rgba(238,75,43,.12),0 8px 10px -1px rgba(238,75,43,.3);
+    border-radius: 15px;
+    padding: 0;
+
+}
 
 .unlock-btn {
   font-size: 4rem;
@@ -32,6 +38,7 @@ color: #3d2eff;
   margin-bottom: 1rem;
   display: none;
   white-space: normal;
+  border-radius: 15px;
 }
 
 #bna-con .watch-btn, #bna-con .unlock-btn {
