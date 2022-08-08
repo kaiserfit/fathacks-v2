@@ -55,8 +55,7 @@ $( document ).ready(function() {
      } );
   
      player.ready(function(){
-        player.muted(false);
-        $("#loading").hide();
+        console.log("Video is Ready");
      });
 
   
