@@ -1,19 +1,8 @@
 $( document ).ready(function() {
     timer_init();
-    $('.subscribe-plan').each(function(){
-      $('input[type=radio]', this).get(0).checked = true;
-  });
+
      
-  var v = getCookie('rec');
-  if (v === 'instant'){
-    document.getElementById("co-box").style.display = 'block';
-  }
-     
-   function showCO(){
-       document.getElementById("co-box").style.display = 'block'; 
-       document.cookie = "fh-watched=1";
-       productLoad();
-     }
+
   
      function checkCookie() {
   
@@ -55,7 +44,7 @@ $( document ).ready(function() {
        var userPlay = false;
       //  const player = videojs('my-video');
        const player = videojs('my-video', {
-        //  "playbackRates": [0.75, 1, 1.25, 1.5],
+      
          "controls": true,
          muted: true,
          sources: [{
@@ -71,22 +60,9 @@ $( document ).ready(function() {
          plugins: { eventTracking: true }
      } );
   
-     const hashVal  = [...crypto.getRandomValues(new Uint8Array(4))]
-  .map((x,i)=>(i=x/255*61|0,String.fromCharCode(i+(i>9?i>35?61:55:48)))).join``
-  const timeStamp = Date.now();    
-  const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
-  var minWatched = 0;
+
   
-  // async function myFunction() {
-  //   $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
-  // "json"
-  // );
-  // }
-  
-  // myFunction().then(
-  //   function(value) { console.log(".") },
-  //   function(error) { console.log("..") }
-  // );
+
      player.eventTracking({plugins: { eventTracking: true }})
      
      $("#btnPlay").click(function(){
@@ -97,7 +73,7 @@ $( document ).ready(function() {
        $(".video-js .vjs-control-bar").css({"visibility":"visible"});
        $(".vjs-fullscreen-control").trigger("click");
        userPlay = true;
-      //  setInterval(videoTrack, 1000);
+    
      } else {
        player.play();
        $(this).hide();
@@ -108,10 +84,10 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
+       $("#loading").hide();
     $("#vp").text("video is playing in background");
     
      $(".control-onload").css({"display":"block"});
-     $("#loading").hide();
    });
   
    
@@ -203,7 +179,7 @@ $( document ).ready(function() {
        // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
        // kTr('AddPaymentInfo');
        document.cookie = "fh-watched=1";
-      //  $("#co-box").load("./content.html");
+    
       
        // gtag('event', 'conversion', {'send_to': 'AW-10886811479/aSEvCKj287QDENeensco'});
        hook6 = true;
@@ -231,23 +207,7 @@ $( document ).ready(function() {
     
    });
   
-   function videoTrack(){
-    var t = player.currentTime();
-    var second = parseInt(t);
-    var m = second / 60;
-    
-    if ((m % 1) == 0 && m > minWatched){
-      minWatched = m;
-      // console.log('post')
-        pvid();
-    }
-  }
-  function pvid(){
-    $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:2, id:visitId, m:minWatched},
-  
-      "json"
-    );
-  }
+
   
   
         }); //end doc ready
@@ -295,28 +255,6 @@ $( document ).ready(function() {
   }
     
   
-    function wg(){
-      var wg = getCookie("challenge");
-      if (wg !== "") {
-        
-      
-      
-        $(".wg-text").text(wg);
-      
-        
-       
-        $(".bundle-suggestion").html(
-          'Based on your goal of losing:'+
-         '<b class="wg-text">'+ wg + '</b><br>'+
-          'We Suggest the Ultimate bundle'
-        );
-      
-      } else {
-     
-        $(".bundle-suggestion").hide();
-          
-      }
-    }
         
         function productLoad(){
           var email = getCookie('em');

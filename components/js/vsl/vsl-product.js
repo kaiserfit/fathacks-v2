@@ -1,4 +1,6 @@
-
+$('.subscribe-plan').each(function(){
+    $('input[type=radio]', this).get(0).checked = true;
+});
       $('.scroll-product').click(function(){
         $('html, body').animate({
             scrollTop: $("#co-box").offset().top - 20 
