@@ -54,9 +54,10 @@ $( document ).ready(function() {
          plugins: { eventTracking: true }
      } );
   
-    //  player.ready(function(){
-    //     $("#loading").hide();
-    //  });
+     player.ready(function(){
+        player.muted(false);
+        $("#loading").hide();
+     });
 
   
 
