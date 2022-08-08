@@ -4,10 +4,7 @@ $( document ).ready(function() {
     $('input[type=radio]', this).get(0).checked = true;
 });
    
-var v = getCookie('rec');
-if (v === 'instant'){
-  document.getElementById("co-box").style.display = 'block';
-}
+
    
  function showCO(){
      document.getElementById("co-box").style.display = 'block'; 
@@ -55,8 +52,7 @@ document.cookie="mobile="+window.mobileCheck();
      var userPlay = false;
     //  const player = videojs('my-video');
      const player = videojs('my-video', {
-      //  "playbackRates": [0.75, 1, 1.25, 1.5],
-       "controls": true,
+    
        muted: true,
        sources: [{
         src:'https://d2rvo1g7c89cun.cloudfront.net/',
@@ -77,16 +73,9 @@ const timeStamp = Date.now();
 const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
 var minWatched = 0;
 
-// async function myFunction() {
-//   $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:1, id:visitId},
-// "json"
-// );
-// }
-
-// myFunction().then(
-//   function(value) { console.log(".") },
-//   function(error) { console.log("..") }
-// );
+player.ready(function(){
+  console.log("Video is Ready");
+});
    player.eventTracking({plugins: { eventTracking: true }})
    
    $("#btnPlay").click(function(){
@@ -109,8 +98,8 @@ var minWatched = 0;
 
  player.on('tracking:firstplay', (e, data) => {
   console.log(data);
+  $("#loading").hide();
    $(".control-onload").css({"display":"block"});
-   $("#loading").hide();
  });
 
  
