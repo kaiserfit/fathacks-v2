@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    timer_init();
     $('.subscribe-plan').each(function(){
       $('input[type=radio]', this).get(0).checked = true;
   });
@@ -197,8 +197,8 @@ $( document ).ready(function() {
        if (hook6 === false) {
         $(".unlock-btn").show();
         $(".watch-btn").hide();
-        timer_init();
-        $(".unlock-text").show();
+      
+    
         var x = $("#my-video").hasClass("vjs-fullscreen");
         if (x) {
           $(".vjs-fullscreen-control").trigger("click");
