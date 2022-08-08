@@ -103,7 +103,7 @@ $( document ).ready(function() {
    });
    player.on('timeupdate', function(){
      var time = player.currentTime();
-    if (time >= 20 ){
+    if (time >= 10 ){
         if (hookFinal === false){
             $(".unlock-object").show();
             $(".watch-btn").hide();
