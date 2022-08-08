@@ -106,7 +106,7 @@ $( document ).ready(function() {
      
    });
   
-//    player.controlBar.progressControl.disable();
+   player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
     console.log(data);
     
