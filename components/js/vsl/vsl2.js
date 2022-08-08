@@ -108,9 +108,9 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
-    console.log(data);
+    alert("video playing");
     
-    //  $(".control-onload").css({"display":"block"});
+     $(".control-onload").css({"display":"block"});
      $("#loading").hide();
    });
   
@@ -119,13 +119,7 @@ $( document ).ready(function() {
     if(userPlay){$("#btnResume").hide();}
   });
   
-    // player.on('click', function(){
-    //     if (player.paused()){
-    //         player.play();
-    //     } else {
-    //         player.pause();
-    //     }
-    // })
+ 
    player.on('tracking:pause', (e, data) => {
     $("#btnResume").show();
    });
