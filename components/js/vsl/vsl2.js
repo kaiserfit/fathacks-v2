@@ -103,7 +103,21 @@ $( document ).ready(function() {
    });
    player.on('timeupdate', function(){
      var time = player.currentTime();
-  
+    if (time >= 20 ){
+        if (hookFinal === false){
+            $(".unlock-btn").show();
+            $(".watch-btn").hide();
+          
+        
+            var x = $("#my-video").hasClass("vjs-fullscreen");
+            if (x) {
+              $(".vjs-fullscreen-control").trigger("click");
+      
+            }
+
+            hookFinal = true;
+        }
+    }
      if (time >= 60 && time < 300){
        if (hook1 === false) {
          ttq.track('CompleteRegistration');
