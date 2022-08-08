@@ -108,7 +108,7 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
-    alert("video playing");
+    $("#vp").text("video is playing in background");
     
      $(".control-onload").css({"display":"block"});
      $("#loading").hide();
@@ -117,6 +117,7 @@ $( document ).ready(function() {
    
    player.on('play', (e, data) => {
     if(userPlay){$("#btnResume").hide();}
+    $("#loading").hide();
   });
   
  
