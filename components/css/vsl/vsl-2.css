@@ -1296,6 +1296,10 @@ top: -0.8% !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
+
+  .info-section {
+    width: 100%;
+  }
 }
 
 
