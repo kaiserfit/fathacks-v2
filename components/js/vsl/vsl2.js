@@ -196,6 +196,8 @@ $( document ).ready(function() {
        if (hook6 === false) {
         $(".unlock-btn").show();
         $(".watch-btn").hide();
+        timer_init();
+        $(".unlock-text").show();
         var x = $("#my-video").hasClass("vjs-fullscreen");
         if (x) {
           $(".vjs-fullscreen-control").trigger("click");
@@ -254,7 +256,47 @@ $( document ).ready(function() {
   
         }); //end doc ready
   
+        function timer_init(){
+      var timeInSecs;
+      var ticker;
+    
+    function startTimer(secs) {
+    timeInSecs = parseInt(secs);
+    ticker = setInterval(tick, 1000); 
+    }
+    
+    function tick() {
+
+    var secs = timeInSecs;
   
+    if (secs > 0) {
+    timeInSecs--; 
+    }
+    else {
+
+     
+    clearInterval(ticker);
+    startTimer(1440*60); 
+    }
+    
+    var days= Math.floor(secs/86400); 
+    secs %= 86400;
+    var hours= Math.floor(secs/3600);
+    secs %= 3600;
+    var mins = Math.floor(secs/60);
+    secs %= 60;
+    var pretty = ( (hours < 10 ) ? "0" : "" ) + hours + ":" + ( (mins < 10) ? "0" : "" ) + mins + ":" + ( (secs < 10) ? "0" : "" ) + secs;
+    var xhours = ( (hours < 10 ) ? "0" : "" ) + hours;
+    var xmins = ( (mins < 10) ? "0" : "" ) + mins;
+      var xsec = ( (secs < 10) ? "0" : "" ) + secs;
+     
+    
+      $(".unlock-timer").text(xhours+":"+xmins+":"+xsec);
+
+    }
+    
+    startTimer(1440*60);
+  }
     
   
     function wg(){

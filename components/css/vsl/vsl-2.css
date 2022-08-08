@@ -488,7 +488,7 @@ padding-top: 5%;
     font-size: 2rem; 
     line-height: 1.2;
     font-weight: 700;
-    color: red;
+    color: #000;
     padding: 1.25rem;
   }
 
@@ -1201,6 +1201,12 @@ top: -0.8% !important;
      width: 50%;
     
    }
+
+   .vsl-play-desktop{
+    width: 40%;
+    
+  }
+
 }
 
 
@@ -1400,7 +1406,10 @@ height:400px; width:250px;
   font-size: 4rem;
   font-weight: 700;
   padding: 2rem 4rem;
-  margin: 2rem auto;
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: none;
 }
 
@@ -1413,4 +1422,13 @@ height:400px; width:250px;
 
 .unlock-btn:hover {
   color: #23282d;
+}
+
+.unlock-text {
+  font-size: 3rem;
+  display: none;
+}
+
+.unlock-timer {
+  color: red;
 }
