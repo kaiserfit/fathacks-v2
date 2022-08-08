@@ -107,6 +107,7 @@ var minWatched = 0;
 
 
  player.on('tracking:firstplay', (e, data) => {
+  console.log(data);
    $(".control-onload").css({"display":"block"});
  });
 
