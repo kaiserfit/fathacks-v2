@@ -81,7 +81,7 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
-    
+    alert("video is playing")
     $("#loading").hide();
      $(".control-onload").css({"display":"block"});
    });
