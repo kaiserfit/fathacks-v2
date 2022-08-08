@@ -63,7 +63,7 @@ $( document ).ready(function() {
           type: "video/mp4",
           
         }],
-        // controls: true,
+         controls: true,
          fluid: true,
          autoplay: true,
          preload: "auto",
@@ -94,7 +94,7 @@ $( document ).ready(function() {
          player.muted(false);
        player.currentTime(0);
        $(this).hide();
-    //    $(".video-js .vjs-control-bar").css({"visibility":"visible"});
+       $(".video-js .vjs-control-bar").css({"visibility":"visible"});
        $(".vjs-fullscreen-control").trigger("click");
        userPlay = true;
       //  setInterval(videoTrack, 1000);
@@ -118,13 +118,20 @@ $( document ).ready(function() {
     if(userPlay){$("#btnResume").hide();}
   });
   
-  
+    // player.on('click', function(){
+    //     if (player.paused()){
+    //         player.play();
+    //     } else {
+    //         player.pause();
+    //     }
+    // })
    player.on('tracking:pause', (e, data) => {
     $("#btnResume").show();
    });
 
    $("#btnResume").click(function(){
     player.play();
+    $(this).hide();
    });
    player.on('timeupdate', function(){
      var time = player.currentTime();
@@ -288,6 +295,11 @@ $( document ).ready(function() {
                 }); 
           }
         }
+
+
+        $(".unlock-btn").click(function(){
+            window.location.href = "product-selection.html";
+        });
 
    
   
