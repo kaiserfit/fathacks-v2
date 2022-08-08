@@ -1279,13 +1279,22 @@ top: -0.8% !important;
     margin-bottom: 1.75rem;
   }
 
-  .unlock-btn, .watch-btn {
+  .watch-btn {
     width: 100%;
     padding: 1rem;
     font-size: 2rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     
+  }
+
+
+  .unlock-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
