@@ -53,6 +53,7 @@ document.cookie="mobile="+window.mobileCheck();
     //  const player = videojs('my-video');
      const player = videojs('my-video', {
     
+       autoplay: true,
        muted: true,
        sources: [{
         src:'https://d2rvo1g7c89cun.cloudfront.net/',
@@ -61,20 +62,16 @@ document.cookie="mobile="+window.mobileCheck();
       }],
       controls: true,
        fluid: true,
-       autoplay: true,
        preload: "auto",
        poster:'components/assets/img/Play_button.webp',
        plugins: { eventTracking: true }
    } );
 
-   const hashVal  = [...crypto.getRandomValues(new Uint8Array(4))]
-.map((x,i)=>(i=x/255*61|0,String.fromCharCode(i+(i>9?i>35?61:55:48)))).join``
-const timeStamp = Date.now();    
-const visitId = hashVal+'-'+timeStamp; //unique ID of visitor
-var minWatched = 0;
+
 
 player.ready(function(){
   console.log("Video is Ready");
+  $("#loading").hide();
 });
    player.eventTracking({plugins: { eventTracking: true }})
    
@@ -103,9 +100,6 @@ player.ready(function(){
  });
 
  
-//  player.on('play', (e, data) => {
-//   if(userPlay){setInterval(videoTrack, 1000)}
-// });
 
 
 //  player.on('tracking:pause', (e, data) => clearInterval(videoTrack));
@@ -170,13 +164,7 @@ player.ready(function(){
 
    if (time >= 2690){
      if (hook6 === false) {
-      $(".unlock-btn").show();
-      $(".watch-btn").hide();
-      var x = $("#my-video").hasClass("vjs-fullscreen");
-      if (x) {
-        $(".vjs-fullscreen-control").trigger("click");
 
-      }
        ttq.track('AddPaymentInfo');
      // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
      // kTr('AddPaymentInfo');
@@ -200,7 +188,7 @@ player.ready(function(){
   $(".video-js .vjs-control-bar").css({"visibility":"visible"});
   $(".vjs-fullscreen-control").trigger("click");
   userPlay = true;
- //  setInterval(videoTrack, 1000);
+
 } else {
   player.play();
   $(".vjs-fullscreen-control").trigger("click");
@@ -208,24 +196,6 @@ player.ready(function(){
   }
   
  });
-
- function videoTrack(){
-  var t = player.currentTime();
-  var second = parseInt(t);
-  var m = second / 60;
-  
-  if ((m % 1) == 0 && m > minWatched){
-    minWatched = m;
-    // console.log('post')
-      pvid();
-  }
-}
-function pvid(){
-  $.post("https://pay.kaiserfitapp.com/apiv2/index.php", {a:2, id:visitId, m:minWatched},
-
-    "json"
-  );
-}
 
 
       }); //end doc ready
