@@ -67,7 +67,7 @@ $( document ).ready(function() {
          fluid: true,
          autoplay: true,
          preload: "auto",
-         poster:'components/assets/img/Play_button.webp',
+         poster:'components/assets/img/customplay.webp',
          plugins: { eventTracking: true }
      } );
   
@@ -106,9 +106,10 @@ $( document ).ready(function() {
      
    });
   
-  
+//    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
     console.log(data);
+    
      $(".control-onload").css({"display":"block"});
      $("#loading").hide();
    });
@@ -217,7 +218,7 @@ $( document ).ready(function() {
   
   
    });
-     
+    
    $(".watch-btn").click(function(){
     if (userPlay === false){
       player.muted(false);

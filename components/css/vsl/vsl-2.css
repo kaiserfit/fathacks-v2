@@ -21,6 +21,52 @@ font-family: 'Barlow', sans-serif;
 color: #3d2eff;
 }
 
+
+.unlock-btn {
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 2rem 4rem;
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: none;
+  white-space: normal;
+}
+
+#bna-con .watch-btn, #bna-con .unlock-btn {
+  font-size: 2rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.75rem;
+  margin: 1rem;
+  white-space: normal;
+}
+.watch-btn{
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 2rem 4rem;
+  margin: 2rem auto;
+  white-space: normal;
+}
+
+.unlock-btn:hover {
+  color: #23282d;
+}
+
+.unlock-text {
+  font-size: 3rem;
+  display: none;
+}
+
+.unlock-timer {
+  color: red;
+}
+
+#bna-con img {
+  border-radius: 4px;
+}
+
 .bg-gray {
 /* background-color: #dee2e6; */
 background-color: #ced4da;
@@ -1218,10 +1264,23 @@ top: -0.8% !important;
    }
 }
 
-@media (min-width: 280px) and (max-width: 767.98px){
+@media (min-width: 160px) and (max-width: 767.98px){
   .narrative {
     width: 95%;
 
+  }
+
+  #bna-con img {
+    margin-bottom: 1.75rem;
+  }
+
+  .unlock-btn, .watch-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
   }
 }
 
@@ -1236,6 +1295,9 @@ height:400px; width:250px;
 }
 
 @media  (max-width: 279.98px) {
+  #bna-con img {
+    margin-bottom: 1.75rem
+  }
   .bna-text {
     font-size: 2rem;
     position: unset;               
@@ -1400,35 +1462,4 @@ height:400px; width:250px;
 }
 .vjs-progress-holder.vjs-slider.vjs-slider-horizontal {
   display: none;
-}
-
-.unlock-btn {
-  font-size: 4rem;
-  font-weight: 700;
-  padding: 2rem 4rem;
-  margin-left:  auto;
-  margin-right:  auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  display: none;
-}
-
-.watch-btn{
-  font-size: 4rem;
-  font-weight: 700;
-  padding: 2rem 4rem;
-  margin: 2rem auto;
-}
-
-.unlock-btn:hover {
-  color: #23282d;
-}
-
-.unlock-text {
-  font-size: 3rem;
-  display: none;
-}
-
-.unlock-timer {
-  color: red;
 }
