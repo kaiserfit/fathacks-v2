@@ -110,7 +110,7 @@ $( document ).ready(function() {
    player.on('tracking:firstplay', (e, data) => {
     console.log(data);
     
-     $(".control-onload").css({"display":"block"});
+    //  $(".control-onload").css({"display":"block"});
      $("#loading").hide();
    });
   

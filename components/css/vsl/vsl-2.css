@@ -56,9 +56,10 @@ color: #3d2eff;
 
 .unlock-text {
   font-size: 3rem;
-
 }
-
+.vjs-remaining-time-display {
+  display: none !important;
+}
 .unlock-timer {
   color: red;
 }
