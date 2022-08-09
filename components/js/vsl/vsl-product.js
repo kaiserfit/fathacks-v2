@@ -49,7 +49,7 @@ $('.checkout-button').click(function() {
 
 
     if (testidx != '') { //there is an active test;
-      vrecordCheckout(page)
+      vrecordCheckout(page, dba)
 
   } else { //there is no running test
  
