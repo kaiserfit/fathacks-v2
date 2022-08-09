@@ -1283,7 +1283,60 @@ top: -0.8% !important;
    }
 }
 
+
+#sticky {
+  padding-top: 12px;
+  
+  text-align: center;
+  position: fixed;
+  top: -25px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0px;
+  background-image: linear-gradient(to right, darkblue, blue, cyan);
+  transition: height 0.3s ease-in;
+}
+
+#sticky.scrolled {
+  top: 0px;
+  height: 80px;
+}
+#sticky img {
+  height: 170px;
+  width: 300px;
+}
+
+
+#sticky button {
+  display: none;
+  transition: all 0.3s ease-in;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+#sticky.scrolled button{
+  display: block;
+  }
+#sticky button:hover {
+  
+  color: #000;
+}
+
 @media (min-width: 160px) and (max-width: 767.98px){
+  #sticky img {
+    height: auto;
+    width: 100%;
+  }
+  #sticky button {
+    padding: 12px;
+    font-size: 1.5rem;
+
+    white-space: normal;
+  }
+
+
   .narrative {
     width: 95%;
 
