@@ -16,29 +16,29 @@
             }
         }
 
-        $(window).scroll(function() {
-            var t = document.getElementById("top-banner");
-            var scrolly = $("#sticky").hasClass('scrolled');
+        // $(window).scroll(function() {
+        //     var t = document.getElementById("top-banner");
+        //     var scrolly = $("#sticky").hasClass('scrolled');
            
-            if (isInViewport(t)){
+        //     if (isInViewport(t)){
                 
-                topx = true
-            } else {
-                topx = false;
+        //         topx = true
+        //     } else {
+        //         topx = false;
               
-            }
+        //     }
 
            
-            if ($(window).scrollTop() > 100 && topx === false && vsl){
+        //     if ($(window).scrollTop() > 100 && topx === false && vsl){
                 
               
-                $("#sticky").addClass('scrolled');    
+        //         $("#sticky").addClass('scrolled');    
                
-            } else {
+        //     } else {
                 
-              $("#sticky").removeClass('scrolled');
-            }
-        });
+        //       $("#sticky").removeClass('scrolled');
+        //     }
+        // });
 
 
 
