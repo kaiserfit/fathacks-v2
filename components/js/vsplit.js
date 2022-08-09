@@ -1,5 +1,5 @@
 //* JS file for split testing functions */
-      const vsltest = 15; //change this to the test id you created
+      const vsltest = 18; //change this to the test id you created
 
               function randomIntFromInterval(min, max) { // min and max included 
                    return Math.floor(Math.random() * (max - min + 1) + min);
@@ -65,9 +65,10 @@
                  
           
           
-          function vrecordLanding(pageData){ //function to record the split test landing page count of the selected page
+          function vrecordLanding(){ //function to record the split test landing page count of the selected page
             var mobile = window.mobileCheck();
             document.cookie='mobile='+mobile+";path=/"
+            var pageData = getCookie('page');
             $.ajax({
                 type: 'POST',
                 url: 'https://pay.kaiserfitapp.com/split_test/landing.php',
@@ -75,7 +76,9 @@
                 data: {'testid': vsltest,'page_name': pageData, 'mobile': mobile},
                 dataType: 'json',
                 success: function(data) {
+                  document.cookie="r=1;path=/";
                   return true;
+
                
                 },
                  error: function(data){
@@ -94,7 +97,7 @@
                 data: {'testid': vsltest,'page_name': page, 'mobile': mobile},
                 dataType: 'json',
                 success: function(data) {
-               
+                  
                   
                 },
                  error: function(data){
@@ -105,66 +108,9 @@
                   
 
 
-          function recordPurchase(price, bot){ //record the purchase on the checkout page
-            var mobile = getCookie('mobile');
-            var testidx = getParameterByName('spid');
-            var page = getParameterByName('page');
-            document.cookie="spid="+testid+";path=/";
-            document.cookie="stp="+page+";path=/";
-        
-            $.ajax({
-              type: 'POST',
-              url: 'https://pay.kaiserfitapp.com/split_test/purchase.php',
-              crossDomain: true,
-              data: {'testid': testidx,'page_name': page,'price': price, 'mobile': mobile},
-              dataType: 'json',
-              success: function() {
-                  return true;
-                // console.log(data);
-                // findNextPage(bot);
-              },
-               error: function(data){
-                 console.log(data);
-               }
-                });
-          }
+
 
 
 
           
-      function updateAmount(price){ //function to update purchase amount for a page in split test from upsell 1-4
-        var testidx = getCookie('spid');
-        var stp = getCookie('stp');
-        $.ajax({
-           type: 'POST',
-           url: 'https://pay.kaiserfitapp.com/split_test/upsell.php',
-           crossDomain: true,
-           data: {'testid': testidx,'page_name': stp,'price': price},
-           dataType: 'json',
-           success: function(data) {
-            return true;
-           },
-            error: function(data){
-              console.log(data);
-            }
-       });
-    }
-
-    function updateAmount2(price){ //function to update purchase amount for a page in split test at the thank-you page
-        var testidx = getCookie('spid');
-        var stp = getCookie('stp');
-        $.ajax({
-           type: 'POST',
-           url: 'https://pay.kaiserfitapp.com/split_test/upsell.php',
-           crossDomain: true,
-           data: {'testid': testidx,'page_name': stp,'price': price},
-           dataType: 'json',
-           success: function(data) {
-             return true;
-            
-           },
-            error: function(data){
-              console.log(data);
-            }
-       });
-      }
+    

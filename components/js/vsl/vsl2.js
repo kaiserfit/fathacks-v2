@@ -4,6 +4,16 @@ $( document ).ready(function() {
   
        var fhw = getCookie("fh-watched");
       var fsw = getCookie("fh-played");
+
+      var test = getCookie('testid');
+      var r = getCookie('r');
+      
+      if (test != "" && r === "") {
+        //there's a running split test
+
+        vrecordLanding();
+        
+      }
       if (fsw != "") {
         // $(".video-play").hide();
      

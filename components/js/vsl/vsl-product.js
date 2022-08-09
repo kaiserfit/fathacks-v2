@@ -46,17 +46,14 @@ $('.checkout-button').click(function() {
   var page = getCookie('page');
   var dba= rdb.val();
   var testidx = getCookie('testid'); //change this to the id of the active test
-  var v = getCookie('vsltest');
-  if (v != '') {
-    var p = getCookie('rec');
-    vrecordCheckout(p);
-  }
 
- 
+
     if (testidx != '') { //there is an active test;
 
-    recordCheckout(testidx, page, dba); 
-
+    vrecordCheckout(page); 
+    setTimeout(function(){
+      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+    }, 300);
   } else { //there is no running test
  
     setTimeout(function(){

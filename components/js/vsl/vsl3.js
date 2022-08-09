@@ -105,17 +105,15 @@
             var page = getCookie('page');
             var dba= rdb.val();
             var testidx = getCookie('testid'); //change this to the id of the active test
-            var v = getCookie('vsltest');
-            if (v != '') {
-              var p = getCookie('rec');
-              vrecordCheckout(p);
-            }
+         
           
            
               if (testidx != '') { //there is an active test;
           
-              recordCheckout(testidx, page, dba); 
-          
+              vrecordCheckout(page); 
+              setTimeout(function(){
+                window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+              }, 300);
             } else { //there is no running test
            
               setTimeout(function(){
@@ -189,13 +187,12 @@
             });
 
    
-  
-  
-  
+      
 
     
    
             $( document ).ready(function() {
+
                 $('.subscribe-plan').each(function(){
                  
                     $('input[type=radio]', this).get(0).checked = true;
@@ -205,9 +202,13 @@
               
                    var fhw = getCookie("fh-watched");
                   var fsw = getCookie("fh-played");
-                  if (fsw != "") {
-                    // $(".video-play").hide();
-                 
+                  var test = getCookie('testid');
+                  var r = getCookie('r');
+                  
+                  if (test != "" && r === "") {
+                    //there's a running split test
+
+                    vrecordLanding();
                     
                   }
                     if (fhw != "") {
