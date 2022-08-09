@@ -87,9 +87,9 @@
   }
     
   function claim(){
-    var sc = (window.mobileCheck()) ? $("#wrap-1"): $("#wrap-2");
+   
         $('html, body').animate({
-            scrollTop: sc.offset().top
+            scrollTop: $("#wrap-1").offset().top
         }, 1000);
   }
 
