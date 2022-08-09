@@ -1,7 +1,27 @@
 
   var topx = true;
   var vsl = false; //if vsl was watched
- 
+  function recordCheckout(testidx, page, dba){ //function to record checkout click
+    var mobile = getCookie('mobile');
+    $.ajax({
+        type: 'POST',
+        url: 'https://pay.kaiserfitapp.com/split_test/checkout.php',
+        crossDomain: true,
+        data: {'testid': testidx,'page_name': page, 'mobile': mobile},
+        dataType: 'json',
+        success: function(data) {
+          // console.log(data);
+        
+          window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba +"&spid="+ testidx +"&page="+page; //use these parameters for split testing
+        },
+         error: function(data){
+           console.log(data);
+         }
+          });
+  }
+
+
+
   function isInViewport(element) {
             if (element == null){
             return false;
@@ -110,7 +130,7 @@
            
               if (testidx != '') { //there is an active test;
           
-              vrecordCheckout(page, dba)
+              recordCheckout(testidx, page, dba);
                   
                   
               
