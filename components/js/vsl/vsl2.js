@@ -114,22 +114,7 @@ $( document ).ready(function() {
    });
    player.on('timeupdate', function(){
      var time = player.currentTime();
-    if (time >= 10 ){
-        if (hookFinal === false && userPlay){
-            $(".unlock-object").show();
-            $(".watch-btn").hide();
-            $("#btnPlay").hide();
-            $("#btnResume").hide();
-        
-            var x = $("#my-video").hasClass("vjs-fullscreen");
-            if (x) {
-              $(".vjs-fullscreen-control").trigger("click");
-      
-            }
-
-            hookFinal = true;
-        }
-    }
+ 
      if (time >= 60 && time < 300){
        if (hook1 === false) {
          ttq.track('CompleteRegistration');
@@ -187,16 +172,17 @@ $( document ).ready(function() {
      }
   
      if (time >= 2690){
-       if (hook6 === false) {
-        $(".unlock-object").show();
-        $(".watch-btn").hide();
+       if (hook6 === false && userPlay) {
+            $(".unlock-object").show();
+            $(".watch-btn").hide();
+            $("#btnPlay").hide();
+            $("#btnResume").hide();
+        
+            var x = $("#my-video").hasClass("vjs-fullscreen");
+            if (x) {
+              $(".vjs-fullscreen-control").trigger("click");
       
-    
-        var x = $("#my-video").hasClass("vjs-fullscreen");
-        if (x) {
-          $(".vjs-fullscreen-control").trigger("click");
-  
-        }
+            }
          ttq.track('AddPaymentInfo');
        // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
        // kTr('AddPaymentInfo');

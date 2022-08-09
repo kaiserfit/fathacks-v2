@@ -326,26 +326,7 @@
                });
                player.on('timeupdate', function(){
                  var time = player.currentTime();
-                if (time >= 10 ){
-                    if (hookFinal === false && userPlay){
-                        $(".product-wrap").removeClass("hidden");
-                        $(".unlock-text").hide();
-                        $(".watch-btn").hide();
-                        $("#btnPlay").hide();
-                        $("#btnResume").hide();
-                    
-                        var x = $("#my-video").hasClass("vjs-fullscreen");
-                        if (x) {
-                          $(".vjs-fullscreen-control").trigger("click");
-                            
-                        }
-
-                        $("#sticky").addClass("scrolled");
-                        vsl = true;
-            
-                        hookFinal = true;
-                    }
-                }
+             
                  if (time >= 60 && time < 300){
                    if (hook1 === false) {
                      ttq.track('CompleteRegistration');
@@ -403,17 +384,25 @@
                  }
               
                  if (time >= 2690){
-                   if (hook6 === false) {
-                    $(".unlock-object").show();
-                    $(".unlock-text").hide();
-                    $(".watch-btn").hide();
+                   if (hook6 === false && userPlay) {
                     
-                
-                    var x = $("#my-video").hasClass("vjs-fullscreen");
-                    if (x) {
-                      $(".vjs-fullscreen-control").trigger("click");
-              
-                    }
+                        $(".product-wrap").removeClass("hidden");
+                        $(".unlock-text").hide();
+                        $(".watch-btn").hide();
+                        $("#btnPlay").hide();
+                        $("#btnResume").hide();
+                    
+                        var x = $("#my-video").hasClass("vjs-fullscreen");
+                        if (x) {
+                          $(".vjs-fullscreen-control").trigger("click");
+                            
+                        }
+
+                        $("#sticky").addClass("scrolled");
+                        vsl = true;
+            
+                        
+                    
                      ttq.track('AddPaymentInfo');
                    // fbq('track', 'AddPaymentInfo', {}, {eventID:event_id});
                    // kTr('AddPaymentInfo');
