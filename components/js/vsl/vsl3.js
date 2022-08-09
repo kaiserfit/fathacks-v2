@@ -29,7 +29,7 @@
             }
 
            
-            if ($(window).scrollTop() > 100 && topx === false){
+            if ($(window).scrollTop() > 100 && topx === false && vsl){
                 
               
                 $("#sticky").addClass('scrolled');    
@@ -86,13 +86,14 @@
     startTimer(1440*60);
   }
     
-  
+  function claim(){
+    var sc = (window.mobileCheck()) ? $("#wrap-1"): $("#wrap-2");
+        $('html, body').animate({
+            scrollTop: sc.offset().top
+        }, 1000);
+  }
 
-        $(".unlock-btn").click(function(){
-            window.location.href = "product-selection.html";
-        });
-
-
+    
 
         $('.checkout-button').click(function() {
   
@@ -317,10 +318,9 @@
                           $(".vjs-fullscreen-control").trigger("click");
                             
                         }
-                        var sc = (window.mobileCheck()) ? $("#wrap-1"): $("#wrap-2");
-                        $('html, body').animate({
-                            scrollTop: sc.offset().top
-                        }, 1000);
+
+                        $("#sticky").addClass("scrolled");
+                        vsl = true;
             
                         hookFinal = true;
                     }
