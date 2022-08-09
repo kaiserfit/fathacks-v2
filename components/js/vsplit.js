@@ -98,7 +98,7 @@
                 dataType: 'json',
                 success: function(data) {
                   
-                  
+                  return true;
                 },
                  error: function(data){
                    console.log(data);

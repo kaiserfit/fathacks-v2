@@ -49,11 +49,12 @@ $('.checkout-button').click(function() {
 
 
     if (testidx != '') { //there is an active test;
-
-    vrecordCheckout(page); 
-    setTimeout(function(){
-      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
-    }, 300);
+      if(vrecordCheckout(page)){
+                  
+        setTimeout(function(){
+          window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+        }, 300);
+    } 
   } else { //there is no running test
  
     setTimeout(function(){
