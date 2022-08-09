@@ -245,7 +245,7 @@ top: -1.2%;
 }
 
 #n-title-3 {
-top: -.6%;
+top: -2.2%;
 width: 95%;
 }
 
@@ -399,7 +399,7 @@ padding-top: 5%;
 
   #n-title-3 {
     width: 90%;
-
+    top: -.8%;
    }
 
 
@@ -1359,10 +1359,10 @@ height:400px; width:250px;
     font-size: 1.25rem !important;
   }
 
-  .vsl-play-desktop {
-    width: 100%;
-
-  }
+  #n-title-3 {
+    width: 90%;
+    top: -.8%;
+   }
 
   #vslDescription, #vslFooter {
     font-size: 1.2rem;
