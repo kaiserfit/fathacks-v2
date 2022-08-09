@@ -110,7 +110,7 @@
            
               if (testidx != '') { //there is an active test;
           
-              vrecordCheckout(page)
+              vrecordCheckout(page, dba)
                   
                   
               

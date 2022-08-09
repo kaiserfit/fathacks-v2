@@ -88,7 +88,7 @@
           }
 
 
-          function vrecordCheckout(page){ //function to record checkout click
+          function vrecordCheckout(page, dba){ //function to record checkout click
             var mobile = getCookie('mobile');
             $.ajax({
                 type: 'POST',
