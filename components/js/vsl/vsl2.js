@@ -6,7 +6,8 @@ $( document ).ready(function() {
       var fsw = getCookie("fh-played");
       if (fsw != "") {
         // $(".video-play").hide();
-        // $("#loading").hide();
+     
+        
       }
         if (fhw != "") {
           // document.getElementById("co-box").style.display = 'block';
@@ -50,7 +51,7 @@ $( document ).ready(function() {
          controls: true,
          fluid: true,
          preload: "auto",
-         poster:'components/assets/img/customplay.webp',
+         poster:'components/img_assets/loading.webp',
          plugins: { eventTracking: true }
      } );
   
@@ -81,8 +82,6 @@ $( document ).ready(function() {
   
    player.controlBar.progressControl.disable();
    player.on('tracking:firstplay', (e, data) => {
-   
-    $("#loading").hide();
      $(".control-onload").css({"display":"block"});
    });
   
@@ -91,10 +90,12 @@ $( document ).ready(function() {
     if(userPlay){$("#btnResume").hide();}
    
   });
-  
+
+ 
  
    player.on('tracking:pause', (e, data) => {
-    $("#btnResume").show();
+    if(userPlay){$("#btnResume").show();}
+   
    });
 
    $("#btnResume").click(function(){
@@ -104,10 +105,11 @@ $( document ).ready(function() {
    player.on('timeupdate', function(){
      var time = player.currentTime();
     if (time >= 10 ){
-        if (hookFinal === false){
+        if (hookFinal === false && userPlay){
             $(".unlock-object").show();
             $(".watch-btn").hide();
-          
+            $("#btnPlay").hide();
+            $("#btnResume").hide();
         
             var x = $("#my-video").hasClass("vjs-fullscreen");
             if (x) {
