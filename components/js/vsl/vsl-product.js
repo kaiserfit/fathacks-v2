@@ -49,12 +49,8 @@ $('.checkout-button').click(function() {
 
 
     if (testidx != '') { //there is an active test;
-      if(vrecordCheckout(page)){
-                  
-        setTimeout(function(){
-          window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
-        }, 300);
-    } 
+      vrecordCheckout(page)
+
   } else { //there is no running test
  
     setTimeout(function(){

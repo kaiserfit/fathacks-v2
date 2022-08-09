@@ -98,7 +98,9 @@
                 dataType: 'json',
                 success: function(data) {
                   
-                  return true;
+                  setTimeout(function(){
+                    window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+                  }, 300);
                 },
                  error: function(data){
                    console.log(data);
