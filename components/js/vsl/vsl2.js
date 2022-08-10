@@ -14,23 +14,11 @@ $( document ).ready(function() {
         vrecordLanding();
         
       }
-      if (fsw != "") {
-        // $(".video-play").hide();
-     
-        
-      }
-        if (fhw != "") {
-          // document.getElementById("co-box").style.display = 'block';
-  }
+
   
-  else { //initiate timer of vid
-    // document.cookie = "fh-watched=1";
-    document.cookie = "fh-played=1";
-     
   
-  }  
   
-  document.cookie="mobile="+window.mobileCheck();
+  document.cookie="mobile="+window.mobileCheck()+";path=/";
   
        
   }
@@ -49,7 +37,7 @@ $( document ).ready(function() {
   
   
        var userPlay = false;
-      //  const player = videojs('my-video');
+     
        const player = videojs('my-video', {
          autoplay: true,
          muted: true,
