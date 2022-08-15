@@ -305,6 +305,7 @@
                player.controlBar.progressControl.disable();
                player.on('tracking:firstplay', (e, data) => {
                  $(".control-onload").css({"display":"block"});
+                
                });
               
                
@@ -323,6 +324,7 @@
                $("#btnResume").click(function(){
                 player.play();
                 $(this).hide();
+
                });
                player.on('timeupdate', function(){
                  var time = player.currentTime();
@@ -420,7 +422,7 @@
                 
                $(".watch-btn").click(function(){
                 if (userPlay === false){
-                  player.muted(false);
+                player.muted(false);
                 player.currentTime(0);
                 $("#btnPlay").hide();
                 $(".video-js .vjs-control-bar").css({"visibility":"visible"});
