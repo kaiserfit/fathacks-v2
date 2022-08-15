@@ -24,7 +24,7 @@ $('.subscribe-plan').each(function(){
                 success: function(data) {
                   // console.log(data);
                 
-                  window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba +"&spid="+ testidx +"&page="+page; //use these parameters for split testing
+                  window.location.href = "/checkout/?dba="+ dba +"&spid="+ testidx +"&page="+page; //use these parameters for split testing
                 },
                  error: function(data){
                    console.log(data);
@@ -54,7 +54,7 @@ $('.checkout-button').click(function() {
   } else { //there is no running test
  
     setTimeout(function(){
-      window.location.href = "https://kaizerfit.com/checkout/?dba="+ dba;
+      window.location.href = "/checkout/?dba="+ dba;
     }, 200);
     
    }
