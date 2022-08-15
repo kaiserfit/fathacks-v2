@@ -87,7 +87,7 @@ $( document ).ready(function() {
    
    player.on('play', (e, data) => {
     if(userPlay){$("#btnResume").hide();}
-   
+  
   });
 
  
