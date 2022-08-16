@@ -178,7 +178,7 @@ var commentsArray = [
 
       "title": "Getting there without even starving myself.",
       
-      "content": '<img src="components/img_assets/comments/Veronica-Diamond.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="components/img_assets/comments/Veronica-Diamond.png" class="ms-3 rounded img-rev" alt="comment attachment" >',
    
        "page": 2,
       "creator": 1,
@@ -662,7 +662,7 @@ var commentsArray = [
 
       "title": "",
       
-      "content": '<img src="components/img_assets/comments/cici-Woods.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="components/img_assets/comments/cici-Woods.png" class="ms-3 rounded img-rev" alt="comment attachment" >',
    
        "page": 4,
       "creator": 1,
@@ -988,7 +988,7 @@ var commentsArray = [
 
       "title": "Thanks a lot Coach Shane!",
       
-      "content": '<img src="components/img_assets/comments/fen-morrish.PNG" class="ms-3 rounded img-rev" alt="comment attachment" >',
+      "content": '<img src="components/img_assets/comments/fen-morrish.png" class="ms-3 rounded img-rev" alt="comment attachment" >',
    
        "page": 5,
       "creator": 1,
