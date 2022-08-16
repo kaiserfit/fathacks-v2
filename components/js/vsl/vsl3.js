@@ -305,7 +305,7 @@
                player.controlBar.progressControl.disable();
                player.on('tracking:firstplay', (e, data) => {
                  $(".control-onload").css({"display":"block"});
-                //  $(".product-wrap").removeClass("hidden");
+                 $(".product-wrap").removeClass("hidden");
                });
               
                
