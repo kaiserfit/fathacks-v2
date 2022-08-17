@@ -10,7 +10,7 @@
         data: {'testid': testidx,'page_name': page, 'mobile': mobile},
         dataType: 'json',
         success: function(data) {
-          // console.log(data);
+          
         
           window.location.href = "/checkout/?dba="+ dba +"&spid="+ testidx +"&page="+page+"&product=kb"; //use these parameters for split testing
         },
