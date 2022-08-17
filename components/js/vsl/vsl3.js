@@ -36,29 +36,6 @@
             }
         }
 
-        // $(window).scroll(function() {
-        //     var t = document.getElementById("top-banner");
-        //     var scrolly = $("#sticky").hasClass('scrolled');
-           
-        //     if (isInViewport(t)){
-                
-        //         topx = true
-        //     } else {
-        //         topx = false;
-              
-        //     }
-
-           
-        //     if ($(window).scrollTop() > 100 && topx === false && vsl){
-                
-              
-        //         $("#sticky").addClass('scrolled');    
-               
-        //     } else {
-                
-        //       $("#sticky").removeClass('scrolled');
-        //     }
-        // });
 
 
 
@@ -261,7 +238,7 @@
               
               
                    var userPlay = false;
-                  //  const player = videojs('my-video');
+            
                    const player = videojs('my-video', {
                      autoplay: true,
                      muted: true,
@@ -305,20 +282,7 @@
                player.controlBar.progressControl.disable();
                player.on('tracking:firstplay', (e, data) => {
                  $(".control-onload").css({"display":"block"});
-                 $(".product-wrap").removeClass("hidden");
-                 $(".unlock-text").hide();
-                 $(".watch-btn").hide();
-                 $("#btnPlay").hide();
-                 $("#btnResume").hide();
-             
-                 var x = $("#my-video").hasClass("vjs-fullscreen");
-                 if (x) {
-                   $(".vjs-fullscreen-control").trigger("click");
-                     
-                 }
-
-                 $("#sticky").addClass("scrolled");
-                 vsl = true;
+            
                });
               
                
