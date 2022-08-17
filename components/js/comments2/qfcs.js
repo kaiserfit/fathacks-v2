@@ -262,7 +262,7 @@ var commentsArray = [
      
       "created": "2022-04-14",
 
-      "title": "had to share this post from last year, Kaiser Coach + Queen Formula Combo FTW!!",
+      "title": "had to share this post from last year, Kaiser Coach + Kaiser Burner Combo FTW!!",
       
       "content": '<img src="components/img_assets/comments/kendra.webp" class="ms-3 rounded img-rev" alt="comment attachment" >',
    
@@ -1079,7 +1079,7 @@ var commentsArray = [
        "modified": "2021-11-08",
        "title": "Best non-stim fat burner!",
        
-"content": "Absolutely love this product. I'm a long time fat burner user. Queen Formula is the best stimulant free fat burner I've tried and is priced competitively considering its great well known proven ingredients. Curbs my appetite and is great for weight loss and metabolism.",
+"content": "Absolutely love this product. I'm a long time fat burner user. Kaiser Burner is the best stimulant free fat burner I've tried and is priced competitively considering its great well known proven ingredients. Curbs my appetite and is great for weight loss and metabolism.",
        "attachments": [],
        "pings": [],
     "page":  6,
@@ -1100,7 +1100,7 @@ var commentsArray = [
        "modified": "2021-10-27",
        "title": "𝗦𝗽𝗲𝗲𝗱 𝘂𝗽 𝘆𝗼𝘂𝗿 𝗴𝗼𝗮𝗹𝘀!",
      
-"content": "It's been around a month now since I have been using Queen Formula. It's a great product for weight loss. After consuming it for 4-5 days I started to feel its effects. It helped me suppress my hunger. It works amazingly especially if using Kaiser Coach. The best thing is that I don't see any side effects and it's all-natural. It definitely helps you reach your goals quickly.",
+"content": "It's been around a month now since I have been using Kaiser Burner. It's a great product for weight loss. After consuming it for 4-5 days I started to feel its effects. It helped me suppress my hunger. It works amazingly especially if using Kaiser Coach. The best thing is that I don't see any side effects and it's all-natural. It definitely helps you reach your goals quickly.",
        "attachments": [],
        "pings": [],
     "page":  6,
@@ -1163,7 +1163,7 @@ var commentsArray = [
        "modified": "2021-10-09",
        "title": "𝗪𝗼𝗿𝗸𝘀 𝗚𝗿𝗲𝗮𝘁!",
       
-"content": "I have been using Queen Formula for about two months now. I use it for appetite control and weight management. My appetite has decreased so I eat in moderation and the increase In metabolism has helped with the weight loss 😃",       "attachments": [],
+"content": "I have been using Kaiser Burner for about two months now. I use it for appetite control and weight management. My appetite has decreased so I eat in moderation and the increase In metabolism has helped with the weight loss 😃",       "attachments": [],
        "pings": [],
     "page":  6,
        "creator": 1,
@@ -1183,7 +1183,7 @@ var commentsArray = [
        "created": "2021-09-28",
        "modified": "2021-09-28",
        "title": "helping with my Appetite control",
-"content": "Have been using Queen Formula for four weeks now and it has been helping with my Appetite control. I typically have strong cravings between meals but have noticed the urge to snack is less now.",
+"content": "Have been using Kaiser Burner for four weeks now and it has been helping with my Appetite control. I typically have strong cravings between meals but have noticed the urge to snack is less now.",
        "attachments": [],
        "pings": [],
     "page":  7,
@@ -1204,7 +1204,7 @@ var commentsArray = [
        "created": "2021-09-17",
        "modified": "2021-09-17",
        "title": "𝗚𝗿𝗲𝗮𝘁 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝘁𝗼 𝗸𝗶𝗰𝗸 𝘀𝘁𝗮𝗿𝘁 𝘄𝗲𝗶𝗴𝗵𝘁 𝗹𝗼𝘀𝘀",
-"content": "Highly recommend trying out Queen Formula. As it's a non-stimulant it is great for kick starting weight loss without making you feel edgy. Happy i tried it and will continue using it",
+"content": "Highly recommend trying out Kaiser Burner. As it's a non-stimulant it is great for kick starting weight loss without making you feel edgy. Happy i tried it and will continue using it",
        "attachments": [],
        "pings": [],
     "page":  7,
@@ -1549,7 +1549,7 @@ var commentsArray = [
        "created": "2021-05-11",
        "modified": "2021-05-11",
        "title": "𝗚𝗿𝗲𝗮𝘁 𝗽𝗿𝗼𝗱𝘂𝗰𝘁.",
-"content": "After two months of taking Queen Formula, I look a lot slimmer, leanner and lighter.",
+"content": "After two months of taking Kaiser Burner, I look a lot slimmer, leanner and lighter.",
        "attachments": [],
        "pings": [],
     "page":  9,
@@ -1569,7 +1569,7 @@ var commentsArray = [
        "created": "2021-05-08",
        "modified": "2021-05-08",
        "title": "𝗣𝗹𝗲𝗮𝘀𝗲𝗱 𝘀𝗼 𝗳𝗮𝗿!",
-"content": "I thought Queen Formula was reasonably priced and arrived quickly. I took it before breakfast and again before dinner. I found I ate less or was more satisfied with my meal and did not snack in-between meals. I have managed to keep my weight down despite being in lockdown with little access to training and stuck at home with temptations of snacking out of boredom. I will definitely be buying these again and look forward to seeing how they contribute to my diet once back in full training mode.",
+"content": "I thought Kaiser Burner was reasonably priced and arrived quickly. I took it before breakfast and again before dinner. I found I ate less or was more satisfied with my meal and did not snack in-between meals. I have managed to keep my weight down despite being in lockdown with little access to training and stuck at home with temptations of snacking out of boredom. I will definitely be buying these again and look forward to seeing how they contribute to my diet once back in full training mode.",
        "attachments": [],
        "pings": [],
     "page":  9,
@@ -1590,7 +1590,7 @@ var commentsArray = [
        "modified": "2021-05-02",
        "title": "𝗕𝗼𝗱𝘆 𝗳𝗮𝘁’𝘀 𝘄𝗼𝗿𝘀𝘁 𝗻𝗶𝗴𝗵𝘁𝗺𝗮𝗿𝗲",
 "content": "When I began my journey with gym, I had a layer of fat that I have accumulated, and that I needed to burn off."+
-       "<br><br> When searching numerous forums, I have frequently stumbled upon products made by KaiserFit, which have been recommended time and time again. That’s how I have discovered Queen Formula"+
+       "<br><br> When searching numerous forums, I have frequently stumbled upon products made by KaiserFit, which have been recommended time and time again. That’s how I have discovered Kaiser Burner"+
        "<br><br> Thanks to this supplement, I have always been able to boost my metabolism and manage my weight. Any time I have slipped a little too much, I would go back to it and supplement my workout routine with this product and it worked!",
        "attachments": [],
        "pings": [],
@@ -1692,7 +1692,7 @@ var commentsArray = [
        "created": "2021-04-05",
        "modified": "2021-04-05",
        "title": "𝗔𝗺𝗮𝘇𝗶𝗻𝗴",
-"content": "I have recently started using this product and I must say I am already very impressed. I have struggled recently to manage my weight but Queen Formula has played a massive part in helping me look slimmer. Every morning when I wake up I will have some Queen Formula and that helps to control my appetite and leaves me feeling fuller for longer. I also feel that while taking Queen Formula my metabolism seems to have improved which is something I have struggled with for a long time. Overall I am very happy with this product, and will continue to use it in the future.",
+"content": "I have recently started using this product and I must say I am already very impressed. I have struggled recently to manage my weight but Kaiser Burner has played a massive part in helping me look slimmer. Every morning when I wake up I will have some Kaiser Burner and that helps to control my appetite and leaves me feeling fuller for longer. I also feel that while taking Kaiser Burner my metabolism seems to have improved which is something I have struggled with for a long time. Overall I am very happy with this product, and will continue to use it in the future.",
        "attachments": [],
        "pings": [],
         "page": 10,

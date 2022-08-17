@@ -282,7 +282,22 @@
                player.controlBar.progressControl.disable();
                player.on('tracking:firstplay', (e, data) => {
                  $(".control-onload").css({"display":"block"});
-            
+                
+
+                 $(".product-wrap").removeClass("hidden");
+                 $(".unlock-text").hide();
+                 $(".watch-btn").hide();
+                 $("#btnPlay").hide();
+                 $("#btnResume").hide();
+             
+                 var x = $("#my-video").hasClass("vjs-fullscreen");
+                 if (x) {
+                   $(".vjs-fullscreen-control").trigger("click");
+                     
+                 }
+
+                 $("#sticky").addClass("scrolled");
+                 vsl = true;
                });
               
                
