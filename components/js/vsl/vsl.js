@@ -319,7 +319,7 @@
           
 
               
-                 if (time >= 39){
+                 if (time >= 2700){
                    if (hook6 === false && userPlay) {
                     
                         $(".product-wrap").removeClass("hidden");
