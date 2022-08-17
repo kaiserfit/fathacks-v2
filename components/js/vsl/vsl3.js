@@ -284,20 +284,7 @@
                  $(".control-onload").css({"display":"block"});
                 
 
-                 $(".product-wrap").removeClass("hidden");
-                 $(".unlock-text").hide();
-                 $(".watch-btn").hide();
-                 $("#btnPlay").hide();
-                 $("#btnResume").hide();
-             
-                 var x = $("#my-video").hasClass("vjs-fullscreen");
-                 if (x) {
-                   $(".vjs-fullscreen-control").trigger("click");
-                     
-                 }
-
-                 $("#sticky").addClass("scrolled");
-                 vsl = true;
+   
                });
               
                
@@ -332,7 +319,7 @@
           
 
               
-                 if (time >= 2690){
+                 if (time >= 20){
                    if (hook6 === false && userPlay) {
                     
                         $(".product-wrap").removeClass("hidden");
