@@ -275,7 +275,7 @@
                      autoplay: true,
                      muted: true,
                      sources: [{
-                      src:'https://d2rvo1g7c89cun.cloudfront.net/KaiserBurner.mp4',
+                      src:'https://d2rvo1g7c89cun.cloudfront.net/KaiserBurner-2.mp4',
                       type: "video/mp4",
                       
                     }],
