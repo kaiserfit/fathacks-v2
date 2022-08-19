@@ -184,7 +184,39 @@
             });
 
    
-      
+            function kTr(eventName){
+              if (window.location.hostname === 'localhost') {
+                return false;
+              }
+              var url = window.location.href;
+              var navAgent = navigator.userAgent;
+              var fbc = getCookie('_fbc');
+              
+            var data = {
+                'eventName': eventName,
+                'eventID': event_id,
+                'URL': url,
+                'userAgent': navAgent,
+                'fbc': fbc,
+                'ipv4Address': ipv4,
+               
+                }
+            
+                setTimeout(() => {
+                   
+                    $.ajax({
+                        type: 'POST',
+                        url: 'https://hook.integromat.com/rzwt665qate0d0bu5xhex9q7cr0lun7m',
+                        crossDomain: true,
+                        data: data,
+                        dataType: 'json'
+                  
+                        }); //end ajax
+            
+                }, 500);
+               
+                
+            }
 
     
    
@@ -311,7 +343,7 @@
                  if (time >= 60 && time < 300){
                    if (hook1 === false) {
                     ttq.track('InitiateCheckout')
-                   
+                    fbq('track', 'InitiateCheckout');
                      hook1 = true;
                    }
                  }
@@ -319,7 +351,7 @@
           
 
               
-                 if (time >= 20){
+                 if (time >= 2940){
                    if (hook6 === false && userPlay) {
                     
                         $(".product-wrap").removeClass("hidden");
