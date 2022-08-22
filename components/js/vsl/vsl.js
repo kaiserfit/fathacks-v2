@@ -376,7 +376,20 @@
                    if (hook1 === false && userPlay) {
                     ttq.track('InitiateCheckout')
                     fbq('track', 'InitiateCheckout');
-                    kTr('InitiateCheckout');
+                    var r = getCookie("_fbc");
+                    var w = getParameterByName("fbclid")  
+                    var p = getCookie('_uip');
+                   
+                        if (r!==""){
+    
+                          kTr('InitiateCheckout', r, p);
+                        } else {
+                          kTr('InitiateCheckout', w, p);
+    
+                        }
+                       
+                    
+               
                      hook1 = true;
                    }
                  }
