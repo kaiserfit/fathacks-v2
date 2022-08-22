@@ -221,9 +221,9 @@
     
    
             $( document ).ready(function() {
-
+              kTr("AddToCart");
                 $('.subscribe-plan').each(function(){
-                 kTr("AddToCart");
+                 
                     $('input[type=radio]', this).get(0).checked = true;
                 });
                 timer_init();
