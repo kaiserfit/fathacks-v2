@@ -221,7 +221,19 @@
     
    
             $( document ).ready(function() {
-              kTr("AddToCart");
+              var t= false;
+              var sub = setInterval(()=>{
+                  var r = getCookie("_fbc");
+                  var pp = getCookie('_uip');
+                  if (r !== "" && pp !== "" && t === false){
+  
+                    kTr("AddToCart");
+                      t=true;
+                  } else {
+                      clearInterval(sub)
+                  }
+              }, 100)
+            
                 $('.subscribe-plan').each(function(){
                  
                     $('input[type=radio]', this).get(0).checked = true;
