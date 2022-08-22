@@ -21,6 +21,16 @@
   }
 
 
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+
 
   function isInViewport(element) {
             if (element == null){
@@ -39,21 +49,20 @@
 
 
 
-        function kTr(eventName){
+        function kTr(eventName, fbc, ip){
           if (window.location.hostname === 'localhost') {
             return false;
           }
           var url = window.location.href;
           var navAgent = navigator.userAgent;
-          var fbc = getCookie('_fbc');
-          var ipv4 = getCookie("_uip");
+        
         var data = {
             'eventName': eventName,
             'eventID': event_id,
             'URL': url,
             'userAgent': navAgent,
             'fbc': fbc,
-            'ipv4Address': ipv4,
+            'ipv4Address': ip,
            
             }
         
@@ -221,18 +230,29 @@
     
    
             $( document ).ready(function() {
+    
+
               var t= false;
               var sub = setInterval(()=>{
                   var r = getCookie("_fbc");
-                  var pp = getCookie('_uip');
-                  if (r !== "" && pp !== "" && t === false){
+                  var w = getParameterByName("fbclid")
+                  console.log(r ,w);
+                  
+                  var p = getCookie('_uip');
+                  if ((r !== "" || w !== "") && p !=="" && t === false){
+                      if (r!==""){
   
-                    kTr("AddToCart");
+                        kTr('AddToCart', r, p);
+                      } else {
+                        kTr('AddToCart', w, p);
+  
+                      }
                       t=true;
                   } else {
                       clearInterval(sub)
                   }
               }, 100)
+             
             
                 $('.subscribe-plan').each(function(){
                  
