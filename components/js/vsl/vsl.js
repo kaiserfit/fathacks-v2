@@ -340,10 +340,11 @@
                player.on('timeupdate', function(){
                  var time = player.currentTime();
              
-                 if (time >= 60 && time < 300){
-                   if (hook1 === false) {
+                 if (time >= 60 && time < 100){
+                   if (hook1 === false && userPlay) {
                     ttq.track('InitiateCheckout')
                     fbq('track', 'InitiateCheckout');
+                    kTr('InitiateCheckout');
                      hook1 = true;
                    }
                  }
