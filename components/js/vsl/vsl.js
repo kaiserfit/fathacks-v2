@@ -308,7 +308,7 @@
                      muted: true,
                      sources: [{
                       src:'https://d2rvo1g7c89cun.cloudfront.net/Unisex+Vsl+New+Cut.m4v',
-                      type: "video/m4v",
+                      type: "video/mp4",
                       
                     }],
                      controls: true,
